@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>设置-标签管理</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link href="http://admin.nmop.cn//static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn//static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn//static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn//static/admin/css/style.css" rel="stylesheet">
+	    	
+	    <!-- 外部插件——bootstrap表格插件CSS -->
+		<link href="http://admin.nmop.cn//static/admin/bootstrap-table/1.10.1/bootstrap-table.min.css" rel="stylesheet">
+		<link href="http://admin.nmop.cn//static/admin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+		
+		<!-- 外部插件——消息提示插件CSS -->
+		<link href="http://admin.nmop.cn//static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet">
+		<link href="http://admin.nmop.cn//static/admin/apps/settings/css/toastr/toastr.min.css" rel="stylesheet">
+		
+		<!-- 外部插件——颜色选择插件CSS-->
+		<link href="//cdn.bootcss.com/bootstrap-colorpicker/2.3.0/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+			
+		<!-- 公用 JS -->
+	    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="http://admin.nmop.cn//static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    	
+  		<!-- 外部插件——bootstrap表格插件JS-->
+    	<script src="http://admin.nmop.cn//static/admin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+	    <script src="http://admin.nmop.cn//static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+	    
+	    <!-- 外部插件——JQ表单验证插件JS-->
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+	    
+	    <!-- 外部插件——消息提示插件JS-->
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script>
+	    <script src="http://admin.nmop.cn//static/admin/apps/settings/js/toastr/toastr.min.js"></script>
+	    
+	    <!-- 外部插件——颜色选择插件JS-->
+	   <script src="//cdn.bootcss.com/bootstrap-colorpicker/2.3.0/js/bootstrap-colorpicker.min.js"></script>
+	    
+	</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>设置</h3>
+			<ul class="breadcrumb">
+			  <li><a href="globalConfig_siteInfo.html">设置</a></li>
+			  <li class="active">标签管理</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="wrapper wrapper-content animated fadeInRight">
+	    	<div class="row">
+	            <div class="col-sm-12">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-content">
+	                        <!--tab-content start-->
+	                        <div class="tab-content">	
+                        		<!--exampleTableEventsToolbar start-->
+                        		<div class="btn-group hidden-xs" id="toolbar" role="group">
+                                	<div class="row">
+                                		<div class="col-sm-12">
+                                			<div id="toolbar">
+			                        			<button type="button" class="btn btn-primary"  id="addBtn" data-toggle="modal" data-target="#addModal">
+										   			<i class="glyphicon glyphicon-plus"></i>添加
+										   		</button>
+										        <button id="remove" class="btn btn-danger" disabled>
+										            <i class="glyphicon glyphicon-remove"></i> 删除
+										        </button>
+										    </div>
+                                		</div>
+                                	</div>
+                                	<!--data-url="http://admin.nmop.cn//system/menu/index/list"-->
+                                </div>
+                        		<!--texampleTableEventsToolbar end-->
+                        		
+                        		<!--exampleTableEvents start-->
+	                            <table id="table" class="table table-hover">
+						    	</table>
+                        		<!--exampleTableEvents end-->
+                        		<div id="msg"></div>
+	                        </div>
+	                        <!--tab-content end-->
+							
+	                    </div><!--ibox-content end-->
+	                </div><!--ibox end-->
+	            </div><!--col-sm-12 end-->
+	        </div><!--row end-->
+	    </div>
+	    <!--body wrapper end-->
+	    
+	    <!--添加菜单模态弹出框 开始-->
+		<div class="modal" id="addModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">添加菜单</h4>
+					</div>
+					<div class="modal-body">
+	                    <form class="form-horizontal" id="addMenuForm" method="get">
+	                    	<div class="form-group">
+                                <label class="col-sm-3 control-label">菜单排序：</label>
+                                <div class="col-sm-8">
+                                    <input id="csort" type="number" class="form-control" name="csort">
+                                </div>
+                            </div>
+                    		<div class="form-group">
+                                <label class="col-sm-3 control-label">菜单名称：</label>
+                                <div class="col-sm-8">
+                                    <input id="cname" name="cname" minlength="2" type="text" class="form-control" required  aria-required="true">
+                                </div>
+	                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">菜单地址：</label>
+                                <div class="col-sm-8">
+                                    <input id="curl" type="url" class="form-control" name="curl" required  aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+							    <div class="col-sm-3 col-sm-offset-3">
+							      <button type="submit" class="btn btn-primary" data-dismiss="modal" id="add">确定</button>
+							      <button type="button" class="btn btn-primary">取消</button>
+							    </div>
+							  </div>
+	                    </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <!--添加菜单模态弹出框 开始-->
+	    
+	    <!--添加颜色模态弹出框 开始-->
+	    <div class="modal fade" id="myColorModal" tabindex="-1"  role="dialog" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">编辑TAG</h4>
+					</div>
+		            <div class="modal-body">
+		                <div id="cp2" class="input-group colorpicker-component" data-click="">
+		                    <input type="text" value="" class="form-control" />
+		                    <span class="input-group-addon"><i style="background-color: rgb(255, 146, 180)"></i></span>
+		                </div>
+		            </div>
+		            <div class="modal-footer">
+		            	<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+		            	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	    <!--添加颜色模态弹出框 结束-->
+	    
+		<script>
+	/*设置变量*/
+    var 	$table = $('#table'),
+        	$remove = $('#remove'),
+        	$add=$('#add'),
+        	selections = [];
+        	
+    /*初始化函数*/   	
+    function initTable() {
+        $table.bootstrapTable({
+        	height: getHeight(),
+        	url: 'setting_TagsManage.json',
+		    method: 'get',
+		    toolbar: '#toolbar',
+		    pagination: true,
+		    sidePagination: "server",
+		    queryParamsType: 'page',
+		    pageNumber:1,
+		    pageSize: 10,
+		    pageList: [10, 25, 50, 100],
+		    search: true,
+		    sortable:true,
+		    idField:"tagid",
+		    showColumns: true,	
+		    showRefresh: true,
+		    showToggle: true,
+		    showPaginationSwitch:true,
+		    responseHandler:responseHandler,
+            columns: [{
+		        field: 'state',
+		        checkbox: true,
+		        align: 'center',
+		        valign: 'middle'
+		    }, 
+		    {
+		        title: 'ID',
+		        field: 'tagid',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '排序',
+		        field: 'sort',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        editable:{
+		        	type: 'number',
+                    title: '排序',
+                    validate: function (value) {
+                        value = $.trim(value);
+                        if (!value) {
+                            return '这是必填项';
+                        }
+                        if (value<0) {
+                            return '不能小于0'
+                        }
+                    },
+                    success: function(response, newValue) {
+						    alert('保存信息成功')
+					}
+				},
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: 'Tag',
+		        field: 'tag',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '使用次数',
+		        field: 'usetimes',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: 'PV',
+		        field: 'pv',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		    	title: '管理操作',
+		    	field: 'operate',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        events: operateEvents,
+		        formatter: operateFormatter
+			}
+		]
+    });
+    
+    /*添加模态框验证*/
+    $('#addMenuForm').validate({
+    	rules:{
+    		csort:{
+    			required:true,
+    			digits:true
+    		},
+    		cname:{
+    			required:true
+    		},
+    		curl:{
+    			required:true,
+    			url:true
+    		}
+    	}
+    })
+    
+    /*点击添加确定按钮*/
+    $add.click(function () {
+    	if($('#addMenuForm').valid()){
+    		var addMenu=$('#addMenuForm').serialize();
+    		alert('提交数据'+addMenu)
+    		$('#addMenuForm').bind('click',function(){
+    			$.ajax({
+    				type:"POST",
+    				url:"xxx.json",
+    				cache:false,
+    				dataType: "json",
+    				data:addMenu,
+    				success:function(msg){
+    					$table.bootstrapTable('load',msg)
+    				},
+    				error:function(data, textStatus, xhr){
+    					$('#msg').html(data);
+    				}
+    			})
+    		})
+    	}
+    });
+    
+    /*删除按钮的状态*/ 
+    $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        // save your data, here just save the current page
+        selections = getIdSelections();
+        // push or splice the selections if you want to save all data selections
+    });
+    
+    /*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'tagid',
+		                values: ids
+		            });
+		             $remove.prop('disabled', true);
+                }
+            });
+           
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    }
+    
+    /*获取元素的Mmenuid*/ 
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.tagid
+        });
+    }
+    
+    /*对响应体操作*/ 
+	function responseHandler(res) {
+	    if(res.total > 0) {
+		 return {
+		    "rows": res.data,
+		    "total": res.total
+		 	}
+	    } else {
+		 return {
+		    "rows": [],
+		    "total": 0
+		 }
+	    }
+	};
+	
+	/*动态添加操作栏*/ 
+    function operateFormatter(value, row, index) {
+        return [
+        	'<button class="btn child"  title="点击改变tag颜色" style="background:#6e2525;" data-toggle="modal">',
+            '</button>',
+            '<button class="btn remove"  title="点击删除" style="border:none;background:none">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</button>'
+        ].join('');
+    };
+    
+    /*获取元素的data数据*/ 
+    function getData(){
+        return $table.bootstrapTable('getData')
+    }
+    
+    /*给操作栏添加点击行为*/ 
+    window.operateEvents = {
+       	'click .child':function (e, value, row, i) {
+       		$("#myColorModal").modal("toggle");
+       		$("#cp2").data("click",i);
+       		$('#cp2').colorpicker().on('changeColor', function(event) {
+       			var dc=$("#cp2").data('click');
+		        $('#table').find('tbody tr').each(function(){
+		        	if($(this).data('index')==dc){
+		        		$(this).children('td:eq(3)').attr('style','text-align: center; vertical-align: middle;color:'+event.color.toHex());
+		        	}
+		        })
+		    })
+        },
+        'click .remove': function (e, value, row, index) {
+        	swal({
+                title: "确认删除吗？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1ab394",
+                confirmButtonText: "是，删除",
+                cancelButtonText: "不，取消",
+                closeOnConfirm: false,
+                closeOnCancel: true 
+        		},
+                function (isConfirm) {
+                    if (isConfirm) {
+                       	swal("Deleted!", "你的记录删除成功", "success");
+                      	$table.bootstrapTable('remove', {
+			                field: 'tagid',
+			                values: [row.tagid]
+			            });
+                    }
+                });
+        }
+    };
+   
+    /*获取表格的高度*/ 
+    function getHeight() {
+        return $(window).height();
+    };
+    
+    /*获取全部表格个数*/
+    function totalTextFormatter(data) {
+        return 'Total';
+    };
+    
+    /*DOM加载完成执行初始化函数*/
+    $(function(){
+    	initTable();
+    });
+    
+	</script>
+    
+</script>
+		
+	</body>
+</html>
+

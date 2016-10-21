@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>相关设置</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+     
+	<!-- 公用CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    
+	<!-- 公用 JS -->
+    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- 外部插件——JQ表单验证插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+	
+</head>
+<bodyclass="gray-bg">
+	
+<!-- 头部面包屑导航开始 -->
+<div class="page-heading" style="padding: 20px;">
+	<h3>用户</h3>
+	<ul class="breadcrumb">
+	  <li><a href="user_manage.html">用户</a></li>
+	  <li class="active">相关设置</li>
+	</ul>
+</div>
+<!-- 头部面包屑导航结束 -->
+
+<!-- 身体包裹层开始 -->
+<div class="row wrapper wrapper-content animated fadeInRight">
+	<div class="col-sm-12">
+    	<div class="ibox float-e-margins">
+    		<div class="ibox-content">
+            	<!-- 包裹层选项卡导航开始 -->
+            	<div class="clients-list">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                        	<a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i>注册设置</a>
+                        </li>
+                        <li class="">
+                        	<a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i>Ucenter整合</a>
+                        </li>
+                        <li class="">
+                        	<a data-toggle="tab" href="#tab-3"><i class="fa fa-briefcase"></i>Phpwind整合</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 包裹层选项卡导航结束 -->
+                <!-- 包裹层选项卡内容开始 -->
+                <div class="tab-content">
+                	<!-- 选项卡内容1开始 -->
+                	<div id="tab-1" class="tab-pane active">
+                		<div class="row">
+                			<div class="col-md-12">
+                				<!--ibox start-->
+                				<div class="ibox float-e-margins">
+				                    <!--ibox-content start-->
+				                    <div class="ibox-content">
+				                        <form class="form-horizontal" id="settingForm1">
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">用户注册：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option1" name="userRegister1" checked="checked">允许</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option2" name="userRegister1">禁止</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">登陆限制：</label>
+				                                <div class="col-sm-10">
+				                                	<div class="form-inline">
+				                                		<div class="form-group">
+							                                登陆失败<input type="number" placeholder="5" class="form-control" style="display: inline-block; width: 50px;" name="userForbid1" required="required" min="3">次后，拒绝登陆
+							                                <input type="number" placeholder="1"  class="form-control" style="display: inline-block;width: 50px;" name="userForbid2" required="required" min="0">分钟	
+						                            	</div>
+				                                	</div>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">登陆限制：</label>
+				                                <div class="col-sm-10">
+				                                	<div class="form-inline">
+				                                		<div class="form-group">
+							                                登陆设备IP数量<input type="number" placeholder="300"  class="form-control" style="display: inline-block; width: 50px;" name="userForbid3" required="required" min="0">
+						                            	</div>
+				                                	</div>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">用户注册需要审核：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="yes" name="userCheck" required="required">是</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">禁用用户名：</label>
+				                                <div class="col-sm-10">
+				                                	<textarea cols="40" rows="8" placeholder="admin" name="usernameForbid"></textarea>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">注册协议：</label>
+				                                <div class="col-sm-10">
+				                                	<textarea cols="40" rows="8" placeholder="请在这里输入注册协议内容" name="registerProtoclo"></textarea>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">关闭注册时显示：</label>
+				                                <div class="col-sm-10">
+				                                	<textarea cols="40" rows="8" placeholder="注册已关闭" name="rigisterShow"></textarea>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <div class="col-sm-offset-2">
+				                                    <button class="btn btn-primary" type="submit" id="submit1">保存内容</button>
+				                                    <button class="btn btn-default"  type="button">取消</button>
+				                                </div>
+				                            </div>
+				                        </form>
+				                    </div><!--ibox-content end-->
+				                </div><!--ibox end-->
+                			</div>
+                		</div>
+        			</div>
+        			<!-- 选项卡内容1结束 -->
+        			<!-- 选项卡内容2开始 -->
+                	<div id="tab-2" class="tab-pane">
+                		<div class="row">
+                			<div class="col-md-12">
+                				<!--ibox start-->
+                				<div class="ibox float-e-margins">
+                					<!--ibox-title start-->
+				                    <div class="ibox-title">
+							            <div class="panel panel-info">
+		                                    <div class="panel-heading">
+		                                        <i class="fa fa-info-circle"></i>友情提示
+		                                    </div>
+		                                    <div class="panel-body">
+		                                        <p>mysql连接方式：使用mysql连接直接操作ucenter数据表，效率高，推荐。</p>
+		                                        <p>socket连接方式：使用http方式发送控制指令给ucenter</p>
+		                                        <p>整合前用户不一致可以使用mysql方式填写正确配置进行整合，同步前请做好数据备份，以免发生意外情况导致损失。</p>
+		                                    </div>
+                        				</div>
+				                    </div>
+				                    <!--ibox-title end-->
+				                    <!--ibox-content start-->
+				                    <div class="ibox-content">
+				                        <form  class="form-horizontal" id="settingForm2">
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">启用：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="yes" name="ucenterStart">是</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="no" name="ucenterStart" checked="checked">否</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">连接方式：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option1"  name="ucenterLink" checked="checked">MySQL方式</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option2"  name="ucenterLink">SOCKET方式</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库主机名：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" placeholder="localhost" class="form-control" name="dataHostname">
+							                        <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 和ckcms再同一服务器，就填localhost，否则填ucenter服务器IP</span>	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库用户名：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" placeholder="root" name="dataUsename">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库密码：</label>
+				                                <div class="col-sm-10">
+							                        <input type="password" class="form-control" name="dataPassword">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库名称：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text"  class="form-control" name="dataName">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库字符集：</label>
+				                                <div class="col-sm-10">
+				                                	<select class="form-control m-b" name="dataAccount">
+				                                        <option class="active">UTF-8</option>
+				                                        <option>GBK/GB2312</option>
+				                                        <option>BIG5</option>
+			                                    	</select>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">数据库表前缀：</label>
+				                                <div class="col-sm-10">
+				                                	<div class="input-group">
+				                                        <input type="text" class="form-control" placeholder="_uc" name="dataPrefix">
+				                                        	<span class="input-group-btn"> 
+					                                        	<button type="button" class="btn btn-primary">
+					                                        		测试数据库连接
+					                                        	</button> 
+				                                        	</span>
+				                                    </div>
+				                                	<span class="help-block m-b-none"><i class="fa fa-info-circle"></i> ucenter数据表前缀，一般填pre_,如果是discuz_x，则默认为pre_ucenter_</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库持久连接：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="close" name="dataConnection">关闭</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="open" name="dataConnection">打开</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">通信密钥：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="Keygen">
+							                        <span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        	需要和ucenter里的密钥保持一致
+							                        </span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">UCenter的URL地址：</label>
+				                                <div class="col-sm-10">
+							                        <input type="url" class="form-control" name="ucenterUrl">
+							                        <span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        	访问ucenter的地址，后面不加斜杠
+							                        </span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">UCenter的IP：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="ucenterIP">
+							                        	<span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        		访问ucenter的ip地址，如果填了这个url，这里请留空
+							                        	</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">应用ID(APP ID):</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="appID">
+							                        <span class="help-block m-b-none">
+						                        	<i class="fa fa-info-circle"></i> 
+						                        		要和ucenter里本系统的应用ID一致
+						                        	</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <div class="col-sm-4 col-sm-offset-2">
+				                                    <button class="btn btn-primary" type="submit" id="submit2">保存</button>
+				                                    <button class="btn btn-default" type="button">重置</button>
+				                                </div>
+				                            </div>
+				                        </form>
+				                    </div><!--ibox-content end-->
+				                </div><!--ibox end-->
+                			</div>
+                		</div>
+        			</div>
+        			<!-- 选项卡内容2结束 -->
+        			<!-- 选项卡内容3开始 -->
+        			<div id="tab-3" class="tab-pane">
+                		<div class="row">
+                			<div class="col-md-12">
+                				<!--ibox start-->
+                				<div class="ibox float-e-margins">
+                					<!--ibox-title start-->
+				                    <div class="ibox-title">
+							            <div class="panel panel-info">
+		                                    <div class="panel-heading">
+		                                        <i class="fa fa-info-circle"></i>友情提示
+		                                    </div>
+		                                    <div class="panel-body">
+		                                        <p>方式与Ucerter类似</p>
+		                                        <p>整合论坛时请确认只启动Ucenter或者Phowind其中一个整合</p>
+		                                    </div>
+                        				</div>
+				                    </div><!--ibox-title end-->
+				                    <!--ibox-content start-->
+				                    <div class="ibox-content">
+				                        <form  class="form-horizontal" id="settingForm3">
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">启用：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="yes" name="phpwindStart">是</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="no" name="phpwindStart" checked="checked">否</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">连接方式：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option1"  name="phpwindLink" checked="checked">MySQL方式</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="option2"  name="phpwindLink">SOCKET方式</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库主机名：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" placeholder="localhost" class="form-control" name="dataHostname">
+							                        <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 和ckcms再同一服务器，就填localhost，否则填ucenter服务器IP</span>	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库用户名：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" placeholder="root" name="dataUsename">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库密码：</label>
+				                                <div class="col-sm-10">
+							                        <input type="password" class="form-control" name="dataPassword">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库名称：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text"  class="form-control" name="dataName">	
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库字符集：</label>
+				                                <div class="col-sm-10">
+				                                	<select class="form-control m-b" name="dataAccount">
+				                                        <option class="active">UTF-8</option>
+				                                        <option>GBK/GB2312</option>
+				                                        <option>BIG5</option>
+			                                    	</select>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                            	<label class="col-sm-2 control-label">数据库表前缀：</label>
+				                                <div class="col-sm-10">
+				                                	<div class="input-group">
+				                                        <input type="text" class="form-control" placeholder="_uc" name="dataPrefix">
+				                                        	<span class="input-group-btn"> 
+					                                        	<button type="button" class="btn btn-primary">
+					                                        		测试数据库连接
+					                                        	</button> 
+				                                        	</span>
+				                                    </div>
+				                                	<span class="help-block m-b-none"><i class="fa fa-info-circle"></i> ucenter数据表前缀，一般填pre_,如果是discuz_x，则默认为pre_ucenter_</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">数据库持久连接：</label>
+				                                <div class="col-sm-10">
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="close" name="dataConnection">关闭</label>
+				                                    <label class="radio-inline">
+				                                        <input type="radio" value="open" name="dataConnection">打开</label>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">通信密钥：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="Keygen">
+							                        <span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        	需要和ucenter里的密钥保持一致
+							                        </span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">phpwind的URL地址：</label>
+				                                <div class="col-sm-10">
+							                        <input type="url" class="form-control" name="phpwindUrl">
+							                        <span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        	访问ucenter的地址，后面不加斜杠
+							                        </span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">phpwind的IP：</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="phpwindIP">
+							                        	<span class="help-block m-b-none">
+							                        	<i class="fa fa-info-circle"></i> 
+							                        		访问ucenter的ip地址，如果填了这个url，这里请留空
+							                        	</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <label class="col-sm-2 control-label">应用ID(APP ID):</label>
+				                                <div class="col-sm-10">
+							                        <input type="text" class="form-control" name="appID">
+							                        <span class="help-block m-b-none">
+						                        	<i class="fa fa-info-circle"></i> 
+						                        		要和ucenter里本系统的应用ID一致
+						                        	</span>
+				                                </div>
+				                            </div>
+				                            <div class="hr-line-dashed"></div>
+				                            <div class="form-group">
+				                                <div class="col-sm-4 col-sm-offset-2">
+				                                    <button class="btn btn-primary" type="submit" id="submit3">保存</button>
+				                                    <button class="btn btn-default" type="button">重置</button>
+				                                </div>
+				                            </div>
+				                        </form>
+				                    </div><!--ibox-content end-->
+
+				                </div><!--ibox end-->
+                			</div>
+                		</div>
+        			</div>
+        			<!-- 选项卡内容3结束 -->
+            	</div>
+            	<!-- 包裹层选项卡内容结束 -->
+            </div>
+        </div>
+	</div>
+</div>
+<!-- 身体包裹层结束 -->
+
+<!-- 错误信息开始 -->
+<div id="errorMsg" style="font-size: 30px; color: red; text-align: center;"></div>  
+<!-- 错误信息结束 -->
+<script>
+$(function(){
+	
+	/*ajax全局设置*/ 
+	$.ajaxSetup({
+	    type:"POST",
+		cache:false,
+		dataType: "json",
+		success:function(msg){
+			alert('保存信息成功！')
+		},
+		error:function(data, textStatus, xhr){
+			$('#errorMsg').html(data.status+"错误");
+		}
+	});	
+	/*提交注册设置表单*/
+	$('#settingForm1').validate({
+		submitHandler:function(){
+			$("#submit1").bind("click", function(){
+				var addAdmin=$('#settingForm1').serialize();
+				$.ajax({
+					url:"xxx.json",
+					data:addAdmin
+				});
+			});
+		}
+	})
+	
+	/*提交ucenter整合表单*/ 
+	$('#settingForm2').validate({
+		submitHandler:function(){
+			$("#submit2").bind("click", function(){
+				var addAdmin=$('#settingForm2').serialize();
+				$.ajax({
+					url:"xxx.json",
+					data:addAdmin
+				});
+			});
+		}
+	})
+	
+	/*提交PHPwind整合表单*/ 
+	$('#settingForm3').validate({
+		submitHandler:function(){
+			$("#submit3").bind("click", function(){
+				var addAdmin=$('#settingForm3').serialize();
+					$.ajax({
+					url:"xxx.json",
+					data:addAdmin
+				});
+			})
+		}
+	})
+	
+})
+</script>	
+</body>
+
+
+</html>

@@ -1,0 +1,63 @@
+{
+	"total": "2",
+    "data":[
+		{
+			"acaid": "1",
+		    "parentid": 0,
+		    "app": "system",
+		    "controller": null,
+		    "action": null,
+		    "name": "系统",
+		    "aca": "system",
+		    "type":0,
+			"childids": [{
+				"departmentid": "1-1",
+				"parentid":1,
+				"name": "超级管理员",
+				"roleid": 1,
+				"numpeople": 2,
+				"rolename":""
+			}]
+		},
+		{
+			"acaid": "33",
+	        "parentid": 0,
+	        "app": "member",
+	        "controller": null,
+	        "action": null,
+	        "name": "会员",
+	        "aca": "member",
+	        "type": 1,
+			"childids":[
+			{
+				"departmentid": "2-1",
+				"parentid":2,
+				"name": "总编辑",
+				"roleid": 2,
+				"numpeople": 5,
+				"rolename":""
+			}]
+		},
+		{
+			"acaid": "100",
+	        "parentid": 0,
+	        "app": "article",
+	        "controller": null,
+	        "action": null,
+	        "name": "文章",
+	        "aca": "article",
+	        "type": 2
+		},
+		{
+			"acaid": "200",
+	        "parentid": 0,
+	        "app": "picture",
+	        "controller": null,
+	        "action": null,
+	        "name": "组图",
+	        "aca": "picture",
+	        "type": 3
+		}
+     ]
+}
+

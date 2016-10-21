@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>菜单管理</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link href="http://admin.nmop.site/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.site/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.site/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.site/static/admin/css/style.css" rel="stylesheet">
+	    	
+	    <!-- 外部插件——bootstrap表格插件CSS -->
+		<link href="http://admin.nmop.site/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.css" rel="stylesheet">
+		<link href="http://admin.nmop.site/static/admin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+		
+		<!-- 外部插件——消息提示插件CSS -->
+		<!-- <link href="http://admin.nmop.site/static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet"> -->
+		<link href="http://admin.nmop.site/static/admin/apps/settings/js/layer-v2.4/layer/skin/layer.css" rel="stylesheet">
+		<link href="http://admin.nmop.site/static/admin/apps/settings/css/toastr/toastr.min.css" rel="stylesheet">
+			
+		<!-- 公用 JS -->
+	    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="http://admin.nmop.site/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    	
+  		<!-- 外部插件——bootstrap表格插件JS-->
+    	<script src="http://admin.nmop.site/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+	    <script src="http://admin.nmop.site/static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+	    
+	    <!-- 外部插件——JQ表单验证插件JS-->
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+	    
+	    <!-- 外部插件——消息提示插件JS-->
+	    <!-- <script src="http://admin.nmop.site/static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script> -->
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/layer-v2.4/layer/layer.js"></script>
+	    <script src="http://admin.nmop.site/static/admin/apps/settings/js/toastr/toastr.min.js"></script>
+	    
+	</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>设置</h3>
+			<ul class="breadcrumb">
+			  <li><a href="globalConfig_siteInfo.html">设置</a></li>
+			  <li class="active">菜单管理</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="wrapper wrapper-content animated fadeInRight">
+	    	<div class="row">
+	            <div class="col-sm-12">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-content">
+	                        <!--tab-content start-->
+	                        <div class="tab-content">	
+                        		<!--exampleTableEventsToolbar start-->
+                        		<div class="btn-group hidden-xs" id="toolbar" role="group">
+                                	<div class="row">
+                                		<div class="col-sm-12">
+                                			<div id="toolbar">
+			                        			<button type="button" class="btn btn-primary"  id="addBtn" data-toggle="modal" data-target="#addModal">
+										   			<i class="glyphicon glyphicon-plus"></i>添加
+										   		</button>
+										        <button id="remove" class="btn btn-danger" disabled>
+										            <i class="glyphicon glyphicon-remove"></i> 删除
+										        </button>
+										    </div>
+                                		</div>
+                                	</div>
+                                	<!--data-url="http://admin.nmop.site/system/menu/index/list"-->
+                                </div>
+                        		<!--texampleTableEventsToolbar end-->
+                        		
+                        		<!--exampleTableEvents start-->
+	                            <table id="table" class="table table-hover">
+						    	</table>
+                        		<!--exampleTableEvents end-->
+	                        </div>
+	                        <!--tab-content end-->
+							
+	                    </div><!--ibox-content end-->
+	                </div><!--ibox end-->
+	            </div><!--col-sm-12 end-->
+	        </div><!--row end-->
+	    </div>
+	    <!--body wrapper end-->
+	    
+	    <!--添加菜单模态弹出框 开始-->
+		<div class="modal" id="addModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">添加菜单</h4>
+					</div>
+					<div class="modal-body">
+	                    <form class="form-horizontal" id="addMenuForm" method="get">
+	                    	<div class="form-group">
+                                <label class="col-sm-3 control-label">菜单排序：</label>
+                                <div class="col-sm-8">
+                                    <input id="csort" type="number" class="form-control" name="csort" maxlength="2" range="[1,10]">
+                                </div>
+                            </div>
+                    		<div class="form-group">
+                                <label class="col-sm-3 control-label">菜单名称：</label>
+                                <div class="col-sm-8">
+                                    <input id="cname" name="cname" minlength="2" type="text" class="form-control" required  aria-required="true">
+                                </div>
+	                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">菜单地址：</label>
+                                <div class="col-sm-8">
+                                    <input id="curl" type="url" class="form-control" name="curl" required  aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+							    <div class="col-sm-3 col-sm-offset-3">
+							      <button type="submit" class="btn btn-primary" data-dismiss="modal" id="add">确定</button>
+							      <button type="button" class="btn btn-primary">取消</button>
+							    </div>
+							  </div>
+	                    </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <!--添加菜单模态弹出框 开始-->
+	    
+	    <!--警告框开始-->
+	    <div class="alert alert-warning alert-dismissible" role="alert" id="removeMenu" style="display: none;">
+		  <strong>警告！</strong>您未选中任何删除项
+		</div>
+		<!--警告框结束-->
+		
+		<script>
+	/*设置变量*/
+    var 	$table = $('#table'),
+        	$remove = $('#remove'),
+        	$add=$('#add'),
+        	selections = [];
+        	
+    /*初始化函数*/   	
+    function initTable() {
+        $table.bootstrapTable({
+        	height: getHeight(),
+        	url: 'http://admin.nmop.site/system/menu/index/list',
+		    method: 'get',
+		    toolbar: '#toolbar',
+		    pagination: true,
+		    sidePagination: "server",
+		    queryParamsType: 'page',
+		    pageNumber:1,
+		    pageSize: 10,
+		    pageList: [10, 25, 50, 100],
+		    search: true,
+		    sortable:true,
+		    idField:"menuid",
+		    showColumns: true,	
+		    showRefresh: true,
+		    showToggle: true,
+		    showPaginationSwitch:true,
+		    clickToSelect: true,
+		    searchFormatter:true,
+		    responseHandler:responseHandler,
+            columns: [{
+		        field: 'state',
+		        checkbox: true,
+		        align: 'center',
+		        valign: 'middle'
+		    }, 
+		    {
+		        title: 'ID',
+		        field: 'menuid',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '排序',
+		        field: 'sort',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        editable:{
+		        	type: 'number',
+                    title: '排序',
+                    validate: function (value) {
+                        value = $.trim(value);
+                        if (!value) {
+                            return '这是必填项';
+                        }
+                        if (value<0) {
+                            return '不能小于0'
+                        }
+                        /*var data = $table.bootstrapTable('getData'),
+                            index = $(this).parents('tr').data('index');
+                        console.log(data[index]);
+                        return '';*/
+                    },
+                    success: function(response, newValue) {
+						    alert('保存信息成功')
+					}
+				},
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '菜单名称',
+		        field: 'name',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        editable: {
+		        	success: function(response, newValue) {
+						    alert('保存信息成功')
+					}
+		        },
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '链接地址',
+		        field: 'url',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        editable: {
+		        	success: function(response, newValue) {
+						    alert('保存信息成功')
+					}
+		        },
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		    	title: '管理操作',
+		    	field: 'operate',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        events: operateEvents,
+		        formatter: operateFormatter
+			}
+		]
+    });
+    
+    /*点击添加按钮*/   	
+    $add.click(function () {
+	 	var  $csort=$("#csort").val(),
+    	       $cname=$("#cname").val(),
+    	       $curl=$("#curl").val();
+        $table.bootstrapTable('insertRow', {
+            index: 3,
+            row: {
+                sort: $csort,
+                name:$cname,
+                url:$curl
+            },
+            success:function(){
+            	alert('123')
+            }
+        });
+    });
+    
+    /*删除按钮的状态*/ 
+    $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        // save your data, here just save the current page
+        selections = getIdSelections();
+        // push or splice the selections if you want to save all data selections
+    });
+    
+    /*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        /*swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'menuid',
+		                values: ids
+		            });
+		            $remove.prop('disabled', true);
+                }
+            });
+        });*/
+        layer.confirm('您确定删除这一项', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+		  layer.msg('您的记录删除成功', {icon: 1});
+		  $table.bootstrapTable('remove', {
+            field: 'menuid',
+            values: ids
+        });
+        $remove.prop('disabled', true);  
+		}, function(){
+		  layer.msg('您取消了', {
+		    time: 20000, //20s后自动关闭
+		    btn: ['明白了', '知道了']
+		  });
+		});
+        
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    }
+    
+    /*获取元素的Mmenuid*/ 
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.menuid
+        });
+    }
+    
+    /*对响应体操作*/ 
+	function responseHandler(res) {
+	    if(res.total > 0) {
+		 return {
+		    "rows": res.data,
+		    "total": res.total
+		 	}
+	    } else {
+		 return {
+		    "rows": [],
+		    "total": 0
+		 }
+	    }
+	};
+	
+	/*动态添加操作栏*/ 
+    function operateFormatter(value, row, index) {
+        return [
+            '<a class="child" href="javascript:void(0)" title="点击进入子集">',
+            '<i class="glyphicon glyphicon-plus"></i>',
+            '</a>  ',
+            '<a class="remove" href="javascript:void(0)" title="点击删除">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</a>'
+        ].join('');
+    };
+    
+    /*获取元素的data数据*/ 
+    function getData(){
+        return $table.bootstrapTable('getData')
+    }
+    
+    /*给操作栏添加点击行为*/ 
+    window.operateEvents = {
+       	'click .child':function(e, value, row, index){
+       		var $href='_parentid'+row.menuid;
+       		$(this).attr('href','http://admin.nmop.site/static/admin/html/setting_menu'+$href+'.html')
+       		//console.log($(this).attr('href'));
+      	 },
+        'click .remove': function (e, value, row, index) {
+        	swal({
+                title: "确认删除吗？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1ab394",
+                confirmButtonText: "是，删除",
+                cancelButtonText: "不，取消",
+                closeOnConfirm: false,
+                closeOnCancel: true 
+        		},
+                function (isConfirm) {
+                    if (isConfirm) {
+                       	swal("Deleted!", "你的记录删除成功", "success");
+                      	$table.bootstrapTable('remove', {
+			                field: 'menuid',
+			                values: [row.menuid]
+			            });
+                    }/* else {
+                        swal("Cancelled", "你取消了删除这条记录", "error");
+                    }*/
+                });
+        }
+    };
+   
+    
+    /*获取表格的高度*/ 
+    function getHeight() {
+        return $(window).height();
+    };
+    
+    /*获取全部表格个数*/
+    function totalTextFormatter(data) {
+        return 'Total';
+    };
+    
+    /*DOM加载完成执行初始化函数*/
+    $(function(){
+    	initTable();
+    });
+    
+	</script>
+    
+</script>
+		
+	</body>
+</html>
+

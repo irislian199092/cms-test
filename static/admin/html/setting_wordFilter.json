@@ -1,0 +1,15 @@
+{
+    "total": "2",
+    "data": [
+        {
+            "filterwordid": "2",
+            "pattern": "六合彩",
+            "replacement": ""
+        },
+        {
+            "filterwordid": "1",
+            "pattern": "法轮功",
+            "replacement": ""
+        }
+    ]
+}

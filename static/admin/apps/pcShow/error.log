@@ -1,0 +1,154 @@
+[24-Aug-2016 14:20:44 PRC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 14
+[24-Aug-2016 14:20:45 PRC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 14
+[24-Aug-2016 14:20:54 PRC] PHP Fatal error:  require(): Failed opening required './page2.php' (include_path='.;/nginx/php5/PEAR') in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 17
+[24-Aug-2016 14:24:07 PRC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 15
+[24-Aug-2016 14:24:15 PRC] PHP Fatal error:  require(): Failed opening required './page2.php' (include_path='.;/nginx/php5/PEAR') in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 22
+[24-Aug-2016 14:37:10 PRC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting ',' or ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 35
+[24-Aug-2016 14:40:23 PRC] PHP Warning:  str_pad() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 42
+[24-Aug-2016 14:40:23 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 46
+[24-Aug-2016 14:40:40 PRC] PHP Warning:  str_pad() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 42
+[24-Aug-2016 14:40:40 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 46
+[24-Aug-2016 14:40:40 PRC] PHP Warning:  str_pad() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 42
+[24-Aug-2016 14:40:40 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 46
+[24-Aug-2016 14:40:41 PRC] PHP Warning:  str_pad() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 42
+[24-Aug-2016 14:40:41 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 46
+[24-Aug-2016 14:40:41 PRC] PHP Warning:  str_pad() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 42
+[24-Aug-2016 14:40:41 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 46
+[24-Aug-2016 14:41:46 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:41:47 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:41:52 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:41:53 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:41:53 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:41:53 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:43:05 PRC] PHP Fatal error:  Cannot redeclare str_pad() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:21 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:43:22 PRC] PHP Warning:  str_pad() expects parameter 4 to be long, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 48
+[24-Aug-2016 14:54:44 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:54:52 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 49
+[24-Aug-2016 14:54:53 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 49
+[24-Aug-2016 14:54:53 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 49
+[24-Aug-2016 14:54:53 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 49
+[24-Aug-2016 14:55:59 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:56:02 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:56:05 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 14:56:06 PRC] PHP Parse error:  syntax error, unexpected 'red' (T_STRING) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 50
+[24-Aug-2016 16:00:37 PRC] PHP Fatal error:  Only variables can be passed by reference in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 71
+[24-Aug-2016 16:34:14 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:19 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:20 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:20 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:20 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:36 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:37 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:34:37 PRC] PHP Fatal error:  Cannot redeclare jpg() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:83) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 90
+[24-Aug-2016 16:35:31 PRC] PHP Warning:  substr() expects at least 2 parameters, 1 given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 92
+[24-Aug-2016 17:09:44 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:01 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:01 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:02 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:02 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:02 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:11 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:23 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:23 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:23 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:42 PRC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 98
+[24-Aug-2016 17:10:52 PRC] PHP Warning:  Missing argument 1 for c2(), called in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 104 and defined in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 99
+[24-Aug-2016 17:10:52 PRC] PHP Warning:  Missing argument 2 for c2(), called in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 104 and defined in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 99
+[24-Aug-2016 17:10:52 PRC] PHP Warning:  Missing argument 3 for c2(), called in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 104 and defined in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 99
+[24-Aug-2016 17:10:52 PRC] PHP Fatal error:  Function name must be a string in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 102
+[24-Aug-2016 17:20:45 PRC] PHP Parse error:  syntax error, unexpected 'c2' (T_STRING), expecting '(' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 97
+[24-Aug-2016 17:23:56 PRC] PHP Catchable fatal error:  Object of class Closure could not be converted to string in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 105
+[24-Aug-2016 17:25:06 PRC] PHP Catchable fatal error:  Object of class Closure could not be converted to string in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 106
+[24-Aug-2016 17:47:37 PRC] PHP Parse error:  syntax error, unexpected 'c1' (T_STRING), expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 123
+[24-Aug-2016 17:53:10 PRC] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 134
+[25-Aug-2016 10:02:29 PRC] PHP Fatal error:  Cannot redeclare link() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:03:33 PRC] PHP Fatal error:  Cannot redeclare link() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:03:33 PRC] PHP Fatal error:  Cannot redeclare link() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:04:56 PRC] PHP Warning:  Missing argument 3 for link2(), called in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 161 and defined in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 151
+[25-Aug-2016 10:11:42 PRC] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 153
+[25-Aug-2016 10:28:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:28:18 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:29:02 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:29:02 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:29:13 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:29:14 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:30:37 PRC] PHP Warning:  Invalid argument supplied for foreach() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 154
+[25-Aug-2016 10:45:38 PRC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 10:45:39 PRC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 158
+[25-Aug-2016 12:41:12 PRC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 213
+[25-Aug-2016 16:55:44 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:55:45 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:56:04 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:56:34 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:56:35 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:56:35 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:57:09 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:57:10 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:57:10 PRC] PHP Fatal error:  Cannot redeclare f5() (previously declared in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php:228) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:58:32 PRC] PHP Warning:  current() expects parameter 1 to be array, integer given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 243
+[25-Aug-2016 16:58:32 PRC] PHP Warning:  key() expects parameter 1 to be array, integer given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 16:58:51 PRC] PHP Warning:  current() expects parameter 1 to be array, integer given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 243
+[25-Aug-2016 16:58:51 PRC] PHP Warning:  key() expects parameter 1 to be array, string given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 244
+[25-Aug-2016 17:34:23 PRC] PHP Parse error:  syntax error, unexpected ';', expecting '=' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 260
+[25-Aug-2016 17:42:27 PRC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 262
+[25-Aug-2016 17:42:28 PRC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 262
+[26-Aug-2016 13:33:07 PRC] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE), expecting ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 312
+[26-Aug-2016 13:33:08 PRC] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE), expecting ';' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 312
+[26-Aug-2016 13:33:17 PRC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 312
+[26-Aug-2016 13:34:01 PRC] PHP Parse error:  syntax error, unexpected '/', expecting '}' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 320
+[26-Aug-2016 13:37:38 PRC] PHP Parse error:  syntax error, unexpected '，array' (T_STRING), expecting ')' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 327
+[26-Aug-2016 13:37:39 PRC] PHP Parse error:  syntax error, unexpected '，array' (T_STRING), expecting ')' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 327
+[26-Aug-2016 14:02:42 PRC] PHP Parse error:  syntax error, unexpected '++' (T_INC) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 338
+[26-Aug-2016 14:05:37 PRC] PHP Fatal error:  Unsupported operand types in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 337
+[26-Aug-2016 14:07:07 PRC] PHP Fatal error:  Unsupported operand types in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 337
+[26-Aug-2016 14:07:08 PRC] PHP Fatal error:  Unsupported operand types in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 337
+[26-Aug-2016 14:13:35 PRC] PHP Parse error:  syntax error, unexpected ')' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 358
+[26-Aug-2016 14:13:36 PRC] PHP Parse error:  syntax error, unexpected ')' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 358
+[26-Aug-2016 14:18:53 PRC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 24 bytes) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 359
+[26-Aug-2016 14:18:54 PRC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 24 bytes) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 359
+[26-Aug-2016 14:19:40 PRC] PHP Fatal error:  Call to undefined function fn() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 364
+[26-Aug-2016 14:19:40 PRC] PHP Fatal error:  Call to undefined function fn() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 364
+[26-Aug-2016 14:20:54 PRC] PHP Fatal error:  Call to undefined function fn() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 364
+[26-Aug-2016 14:20:55 PRC] PHP Fatal error:  Call to undefined function fn() in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 364
+[26-Aug-2016 14:21:16 PRC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 24 bytes) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 360
+[26-Aug-2016 14:21:17 PRC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 24 bytes) in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 360
+[26-Aug-2016 15:03:29 PRC] PHP Warning:  array_push() expects parameter 1 to be array, null given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 383
+[26-Aug-2016 15:03:29 PRC] PHP Warning:  array_push() expects parameter 1 to be array, null given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 383
+[26-Aug-2016 15:03:29 PRC] PHP Warning:  array_push() expects parameter 1 to be array, null given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 383
+[26-Aug-2016 15:03:29 PRC] PHP Warning:  array_push() expects parameter 1 to be array, null given in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 383
+[26-Aug-2016 15:04:55 PRC] PHP Parse error:  syntax error, unexpected '}' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 395
+[26-Aug-2016 15:04:56 PRC] PHP Parse error:  syntax error, unexpected '}' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 395
+[26-Aug-2016 15:08:40 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 393
+[26-Aug-2016 15:09:00 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 382
+[26-Aug-2016 15:09:00 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 382
+[26-Aug-2016 15:09:00 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 382
+[26-Aug-2016 15:09:01 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 382
+[26-Aug-2016 15:09:24 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 382
+[26-Aug-2016 15:09:50 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 393
+[26-Aug-2016 15:09:51 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 393
+[26-Aug-2016 15:09:51 PRC] PHP Parse error:  syntax error, unexpected '4' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 393

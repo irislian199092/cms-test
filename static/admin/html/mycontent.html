@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>我的主页——我的内容</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+	    	
+	    <!-- 外部插件——bootstrap表格插件CSS -->
+		<link href="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.css" rel="stylesheet">
+		<link href="http://admin.nmop.cn/static/admin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+		
+		<!-- 外部插件——消息提示插件CSS -->
+		<link href="http://admin.nmop.cn/static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet">
+		
+		<!-- 公用 JS -->
+	    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    	
+  		<!-- 外部插件——bootstrap表格插件JS-->
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+	    
+	    <!-- 外部插件——JQ表单验证插件JS-->
+	    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+	    
+	    <!-- 外部插件——消息提示插件JS-->
+	    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script>
+	    
+	</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>我的内容</h3>
+			<ul class="breadcrumb">
+			  <li><a href="myindex.html">我的主页</a></li>
+			  <li class="active">我的内容</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="wrapper wrapper-content animated fadeInRight">
+	    	<div class="errorMsg"></div>
+	    	<div class="row">
+	            <div class="col-sm-12">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-content">
+	                        <!--tab-content start-->
+	                        <div class="tab-content">	
+                        		<!--exampleTableEventsToolbar start-->
+                        		<div class="btn-group hidden-xs" role="group">
+                                	<div class="row">
+                                		<div class="col-sm-12">
+                                			<div id="toolbar">
+			                        			<button type="button" class="btn btn-primary"  id="addBtn" data-toggle="modal" data-target="#editModal">
+										   			<i class="glyphicon glyphicon-plus"></i>发布
+										   		</button>
+										   		<div class="btn-group">
+											   			<button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					                                            <span>全部</span><span class="caret"></span>
+					                                    </button>
+					                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+															    <li><a href="#">全部</a></li>
+															    <li class="divider"></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-book"></i>&nbsp;&nbsp;文章</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-photo"></i>&nbsp;&nbsp;组图</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-link"></i>&nbsp;&nbsp;链接</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;视频</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-television"></i>&nbsp;&nbsp;访谈</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-glass"></i>&nbsp;&nbsp;活动</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-book"></i>&nbsp;&nbsp;投票</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-file-excel-o"></i>&nbsp;&nbsp;调查</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-file-picture-o"></i>&nbsp;&nbsp;专题</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-file-audio-o"></i>&nbsp;&nbsp;音频</a></li>
+															    <li><a href="#" data-field="modelname"><i class="fa fa-support"></i>&nbsp;&nbsp;游戏</a></li>
+														</ul>
+											   		</div>
+			                                    	<div class="btn-group">
+			                                    		<button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					                                            <span>已发</span><span class="caret"></span>
+					                                    </button>
+					                                    <ul class="dropdown-menu">
+														    <li><a href="#">已发</a></li>
+														    <li class="divider"></li>
+														    <li><a href="#" data-field="role">待审</a></li>
+														    <li><a href="#" data-field="role">退稿</a></li>
+														    <li><a href="#" data-field="role">草稿</a></li>
+														    <li><a href="#" data-field="role">回收站</a></li>
+														</ul>
+			                                    	</div>
+										        <button id="remove" class="btn btn-danger" disabled>
+										            <i class="glyphicon glyphicon-remove"></i> 删除
+										        </button>
+										    </div>
+                                		</div>
+                                	</div>
+                                </div>
+                        		<!--texampleTableEventsToolbar end-->
+                        		
+                        		<!--exampleTableEvents start-->
+	                            <table id="table" class="table table-hover">
+						    	</table>
+                        		<!--exampleTableEvents end-->
+	                        </div>
+	                        <!--tab-content end-->
+							
+	                    </div><!--ibox-content end-->
+	                </div><!--ibox end-->
+	            </div><!--col-sm-12 end-->
+	        </div><!--row end-->
+	    </div>
+	    <!--body wrapper end-->
+	    
+	    <!--添加菜单模态弹出框 开始-->
+	    <!--添加菜单模态弹出框 开始-->
+	    
+	    <!--编辑模态弹出框 开始-->
+	    <div class="modal" id="editModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">编辑管理员</h4>
+					</div>
+					<div class="modal-body">
+	                    <div class="tab-content" style="padding-top: 20px;">
+	                    	<div id="tab-1" class="tab-pane active" >
+	                    		<form method="get" action="#" class="form-horizontal" id="addAdminForm">
+		                    		<div class="form-group">
+		                    			<label for="username" class="col-sm-3 control-label">栏目：</label>
+									    <div class="col-sm-7">
+									      <input type="text"  class="form-control" placeholder="请输入您的用户名" required="required" name="username" id="username">
+									      	<span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 用户名存在时提升为管理员</span>
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="password" class="col-sm-3 control-label">标题：</label>
+									    <div class="col-sm-7">
+									      <input type="password"  class="form-control" placeholder="请输入您的密码" required  name="password" id="password">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">Tags：</label>
+									    <div class="col-sm-7">
+									      <input type="email" class="form-control" placeholder="请输入您的E-mail" name="email" required="required">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">视频：</label>
+									    <div class="col-sm-7">
+									      <input type="password" class="form-control"  placeholder="请重新设置密码" name="confirmPassword">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">播放器样式：</label>
+									    <div class="col-sm-7">
+		                                    <select class="form-control m-b"name="yangshi" id="yangshi" required="required">
+		                                    	<option value="1">现代-轻</option>
+												<option value="3">现代-轻</option>
+												<option value="4">现代-透明</option>
+												<option value="5">宝石绿</option>
+												<option value="6">现代轻+Logo</option>
+												<option value="7">现代轻+冠名</option>
+												<option value="8">现代轻+前置+后置</option>
+												<option value="9">现代轻+暂停</option>
+												<option value="10">现代轻+消息泡泡</option>
+												<option value="11">现代轻+走马灯</option>
+												<option value="12">现代轻+图文1</option>
+												<option value="13">现代轻+图文2</option>
+												<option value="15">播放器11</option>
+												<option value="17">播放器22</option>
+												<option value="18">中文字幕测试</option>
+												<option value="19">test</option>
+												<option value="20">admin</option>
+		                                    </select>
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">时常：</label>
+									    <div class="col-sm-7">
+									         <input type="text" name="playtime" id="playtime" value="00:10:00" size="10" class="form-control">分钟
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">来源：</label>
+									    <div class="col-sm-7">
+									      <input type="date" class="form-control" placeholder="格式1970-12-30" name="date">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">编辑：</label>
+									    <div class="col-sm-7">
+									      <input type="date" class="form-control" placeholder="格式1970-12-30" name="date">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">IMS-guid：</label>
+									    <div class="col-sm-7">
+									      <input type="date" class="form-control" placeholder="格式1970-12-30" name="date">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">性别：</label>
+									    <div class="col-sm-7">
+									      	<div class="radio">
+	                                        	<label><input type="radio" checked="" value="option1" id="men" name="sex">男</label>
+	                                        	<label><input type="radio" checked="" value="option1" id="women" name="sex">女</label>
+	                                    	</div>
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">生日：</label>
+									    <div class="col-sm-7">
+									      <input type="date" class="form-control" placeholder="格式1970-12-30" name="date">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">QQ：</label>
+									    <div class="col-sm-7">
+									      <input type="text" class="form-control"  placeholder="请输入您的QQ" name="QQ">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">MSN：</label>
+									    <div class="col-sm-7">
+									      <input type="text" class="form-control"  placeholder="请输入您的MSN" name="MSN">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">手机：</label>
+									    <div class="col-sm-7">
+									      <input type="tel" class="form-control"  placeholder="请输入您的手机号"name="mobile">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">电话：</label>
+									    <div class="col-sm-7">
+									      <input type="text" class="form-control" placeholder="请输入您的电话" name="telephone">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">地址：</label>
+									    <div class="col-sm-7">
+									      <input type="text" class="form-control" placeholder="请输入您的地址" name="address">
+									    </div>
+		                    		</div>
+		                    		<div class="hr-line-dashed"></div>
+		                    		<div class="form-group">
+		                    			<label for="name" class="col-sm-3 control-label">状态：</label>
+									    <div class="col-sm-7">
+									      	<div class="radio">
+	                                        	<label><input type="radio" checked="checked" value="option1" id="permit" name="state">启用</label>
+	                                        	<label><input type="radio" checked="" value="option1" id="forbid" name="state">禁用</label>
+	                                    	</div>
+									    </div>
+		                    		</div>
+		                    		<div class="form-group">
+									    <div class="col-sm-offset-3">
+									    	<button type="submit" class="btn btn-primary" id="btnSubmit">确定</button>
+                                        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									    </div>
+		                    		</div>
+		    					</form>
+	                    	</div>
+	                    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <!--编辑模态弹出框 结束-->		
+	<script>
+	/*设置变量*/
+    var 	$table = $('#table'),
+        	$remove = $('#remove'),
+        	$add=$('#add'),
+        	selections = [];
+        	
+    /*初始化函数*/   	
+    function initTable() {
+        $table.bootstrapTable({
+        	height: getHeight(),
+        	url: 'mycontent.json',
+		    method: 'get',
+		    toolbar: '#toolbar',
+		    pagination: true,
+		    sidePagination: "server",
+		    queryParamsType: 'page',
+		    pageNumber:1,
+		    pageSize: 10,
+		    pageList: [10, 25, 50, 100],
+		    search: true,
+		    sortable:true,
+		    idField:"userid",
+		    showColumns: true,
+		    showRefresh: true,
+		    showToggle: true,
+		    showPaginationSwitch:true,
+		    responseHandler:responseHandler,
+            columns: [{
+		        field: 'choose',
+		        checkbox: true,
+		        align: 'center',
+		        valign: 'middle'
+		    }, 
+		    {
+		        title: '标题',
+		        field: 'title',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '集数',
+		        field: 'chapter',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: 'pv',
+		        field: 'pv',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '权重',
+		        field: 'weight',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '发布人',
+		        field: 'publishedbyname',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '发布时间',
+		        field: 'createdby',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		    	title: '管理操作',
+		    	field: 'operate',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        events: operateEvents,
+		        formatter: operateFormatter
+			}
+		]
+    });
+    
+    
+    
+    
+    /*删除按钮的状态*/ 
+    $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        selections = getIdSelections();
+    });
+    
+    /*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'contentid',
+		                values: ids
+		            });
+		             $remove.prop('disabled', true);
+                }
+            });
+           
+        });
+    }
+    
+    /*对响应体操作*/ 
+	function responseHandler(res) {
+		return res.total?{"rows": res.data,"total": res.total}:{"rows": [],"total": 0}
+	};
+    
+    /*获取元素的userid*/
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.contentid
+        });
+    }
+    
+	/*获取元素的data数据*/ 
+    function getData(){
+        return $table.bootstrapTable('getData')
+    };
+    
+     /*获取表格的高度*/ 
+    function getHeight() {
+        return $(window).height();
+    };
+    
+    /*获取全部表格个数*/
+    function totalTextFormatter(data) {
+        return 'Total';
+    };
+    
+	/*toolbar操作*/ 
+    $('#toolbar .dropdown-menu a').on('click',function(){
+    	$(this).parents('ul').children().removeClass('active');
+    	$(this).parent('li').addClass('active');
+    	var btnHtml=$(this).html()+'<span class="caret" style="margin-left:15px;"></span>';
+    	$(this).parents('ul').siblings('button').html(btnHtml);
+    	if($(this).data('field')=='department'||$(this).data('field')=='role'){
+    		var dfh=$(this).html();
+    		var gD=getData();
+    		var arr=[];
+    		$.each(gD,function(i,n){
+    			if(gD[i].department==dfh||gD[i].role==dfh){
+    				arr.push(i)
+    			}
+    		})
+    		for(var i=0;i<getData().length;i++){
+    			 $table.bootstrapTable('hideRow', {
+                	index:i
+            	});
+    		}
+    		$.each(arr,function(i,item){
+    			$table.bootstrapTable('showRow', {
+                	index:arr[i]
+           		});
+    		})
+    	}
+    	if($(this).html()=="所有部门"||$(this).html()=="所有角色"){
+    		$.each(getData(),function(i,n){
+    			$table.bootstrapTable('showRow', {
+                	index:i
+           		});
+    		})
+    	}
+    })
+	
+	/*点击添加管理员验证*/ 
+	$("#addAdminForm").validate({
+    	rules:{
+    		password:{
+    			rangelength:[3,6],
+    			vpassword:true
+    		},
+    		confirmPassword:{
+    			equalTo:"#password"
+    		}
+    	},
+    	submitHandler:function(form) {
+			var addAdmin=$('#addAdminForm').serialize();
+			$("#btnSubmit").bind("click", function(){
+				$.ajax({
+				type:"POST",
+    				url:"xxx.json",
+    				cache:false,
+    				dataType: "json",
+    				data:addAdmin,
+    				success:function(msg){
+    					$table.bootstrapTable('refresh',{
+    						url:url
+    					});
+    				},
+    				error:function(data, textStatus, xhr){
+    					$('#errorMsg').html(data);
+    				}
+				});
+			})
+		}
+    });
+    
+    $.validator.addMethod('vpassword',function(value,elem,params){
+    	var vpassword=/^[^\s\$]{6,20}$/;
+    	return this.optional(elem)||vpassword.test(value);
+    })
+	
+	/*删除按钮的状态*/
+    $table.on('check.bs.table uncheck.bs.table ' +
+                     'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        selections = getIdSelections();
+    });
+	
+	/*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'contentid',
+		                values: ids
+		            });
+		            $remove.prop('disabled', true);
+                }
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+  	});
+	
+	/*动态添加操作栏*/
+    function operateFormatter(value, row, index) {
+        return [
+        	'<button class="btn edit"  title="点击编辑" style="border:none;background:none" data-toggle="modal">',
+            '<i class="glyphicon glyphicon-edit"></i>',
+            '</button>',
+            '<button class="btn remove"  title="点击删除" style="border:none;background:none">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</button>',
+            '<a class="btn .child"  title="点击进入子集" style="border:none;background:none" href="powerSettings_admin_child.html" target="_blank">',
+            '<i class="glyphicon glyphicon-link"></i>',
+            '</a>'
+        ].join('');
+    };
+    
+    /*给操作栏添加点击行为*/ 
+    window.operateEvents = {
+       	'click .edit':function (e, value, row, i) {
+       		$("#editModal").modal("toggle");
+       		$('#username').val(row.username);
+       		$('#department option,#role option').each(function(){
+       			if($(this).html()==row.department||$(this).html()==row.role){
+       				$(this).attr('selected','selected')
+       			}
+       		})
+        },
+        'click .remove': function (e, value, row, index) {
+        	swal({
+                title: "确认删除吗？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1ab394",
+                confirmButtonText: "是，删除",
+                cancelButtonText: "不，取消",
+                closeOnConfirm: false,
+                closeOnCancel: true 
+        		},
+                function (isConfirm) {
+                    if (isConfirm) {
+                       	swal("Deleted!", "你的记录删除成功", "success");
+                      	$table.bootstrapTable('remove', {
+			                field: 'contentid',
+			                values: [row.contentid]
+			            });
+                    }
+                });
+        }
+    };
+   
+    /*DOM加载完成执行初始化函数*/
+    $(function(){
+    	initTable();
+    });
+    
+    
+</script>
+		
+	</body>
+</html>
+

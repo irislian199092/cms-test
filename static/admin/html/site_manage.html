@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>站点管理</title>
+<meta name="keywords" content="#">
+<meta name="description" content="#">	
+<!-- 公用CSS -->
+<link href="http://admin.nmop.site/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<!-- 公用 JS -->
+<script src="http://admin.nmop.site/static/admin/jquery/jquery-1.11.3.js"></script>
+<style type="text/css">
+.menu_list{width:268px;}
+.menu_head{
+	height: 47px;
+	line-height: 47px;
+	padding-left: 38px;
+	font-size: 14px;
+	color: #525252;
+	cursor: pointer;
+	border-left: 1px solid #e1e1e1;
+	border-right: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	border-top: 1px solid #F1F1F1;
+	position: relative;
+	margin: 0px;
+	font-weight: bold;
+	background: #f1f1f1 url(../css/image/pro_left.png) center right no-repeat;
+}
+.menu_list .current{background:#f1f1f1 url(../css/image/pro_down.png) center right no-repeat;}
+.menu_body{
+	line-height: 38px;
+	border-left: 1px solid #e1e1e1;
+	backguound: #fff;
+	border-right: 1px solid #e1e1e1;
+	
+}
+.menu_body a{display:block;height:38px;line-height:38px;padding-left:38px;color:#777777;background:#fff;text-decoration:none;border-bottom:1px solid #e1e1e1;}
+.menu_body a:hover{text-decoration:none;}
+</style>
+</head>
+<body style="min-height: 660px; cursor: auto;" class="gray-bg">
+	<!-- 面包屑开始 -->
+	<div class="navbar">
+  		<div class="navbar-inner">
+    		<div class="container-fluid">
+    			<div class="page-heading" style="padding:10px 0;">
+					<ul class="breadcrumb">
+					  <li><a href="index.html">首页</a></li>
+					  <li class="active">站点管理</li>
+					</ul>
+				</div>
+      		</div>
+    	</div>
+  	</div>
+  	<!-- 面包屑结束 -->
+    <div class="container-fluid">
+    	<div class="row-fluid">
+    		<!-- 这是左侧导航开始 -->
+    		<div id="firstpane" class="menu_list">
+			</div>
+        	<!-- 这是左侧导航结束 -->
+        	<div id="appContent">
+            	<div class="row">
+            		<!-- 这是右侧内容开始 -->
+            		<div class="col-md-12  demo">
+	            	</div>
+	            	<!-- 这是右侧内容结束 -->
+            	</div>
+        	</div>
+		</div>
+	</div>
+<script type="text/javascript">
+$(function(){
+	var init_arr=[{
+		type:['基础信息'],
+		name:['基础信息子集1','基础信息子集1','基础信息子集1','基础信息子集1']
+	},{
+		type:['角色'],
+		name:['角色子集1']
+	},{
+		type:['部门'],
+		name:['部门子集1']
+	},{
+		type:['管理员'],
+		name:['管理员子集1']
+	},{
+		type:['系统设置'],
+		name:['系统设置子集1','系统设置子集2']
+	},{
+		type:['菜单设置'],
+		name:['菜单设置子集1']
+	}];
+
+	$.each(init_arr,function(i,n){
+		var oH=$('<h3 class="menu_head">'+n.type+'</h3>');
+		var oC=$('<div style="display:none" class="menu_body"></div>')
+		$.each(n.name,function(index,item){
+			var oA=$('<a href="#">'+item+'</a>');
+			oC.append(oA);
+		});
+		$('#firstpane').append(oH);
+		$('#firstpane').append(oC);
+	});
+	$("#firstpane .menu_body:eq(0)").show();
+	$("#firstpane h3.menu_head").click(function(){
+		$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});	
+	$("#secondpane .menu_body:eq(0)").show();
+	$("#secondpane h3.menu_head").mouseover(function(){
+		$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+		(this).siblings().removeClass("current");
+	});
+})
+
+</script>
+</body>
+</html>

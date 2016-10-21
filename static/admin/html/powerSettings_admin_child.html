@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>权限设置——用户资料</title>
+	<meta name="keywords" content="#">
+	<meta name="description" content="#">
+		
+	<!-- 公用CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="{{url('/')}}/staticadmin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url('/')}}/staticadmin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{url('/')}}/staticadmin/css/animate.min.css" rel="stylesheet">
+    <link href="{{url('/')}}/staticadmin/css/style.css" rel="stylesheet">
+    	
+    <!-- 外部插件——个人图像裁剪CSS -->
+	<link href="{{url('/')}}/staticadmin/apps/user/css/cropper/cropper.min.css" rel="stylesheet">
+		
+	<!-- 外部插件——bootstrap表格插件CSS -->
+	<link href="{{url('/')}}/staticadmin/bootstrap-table/1.10.1/bootstrap-table.min.css" rel="stylesheet">
+	<link href="{{url('/')}}/staticadmin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+		
+	<!-- 公用 JS -->
+    <script src="{{url('/')}}/staticadmin/jquery/jquery-1.11.3.js"></script>
+	<script src="{{url('/')}}/staticadmin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+    <!-- 外部插件——个人图像裁剪插件JS-->
+    <script src="{{url('/')}}/staticadmin/apps/user/js/cropper/cropper.min.js"></script>
+    
+    <!-- 外部插件——bootstrap表格插件JS-->
+	<script src="{{url('/')}}/staticadmin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="{{url('/')}}/staticadmin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="{{url('/')}}/staticadmin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+    <script src="{{url('/')}}/staticadmin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+    
+    <!-- 外部插件——JQ滚动条插件JS-->
+    <script src="{{url('/')}}/staticadmin/apps/settings/js/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    <!-- 外部插件——高级表单插件JS-->
+    <script src="{{url('/')}}/staticadmin/apps/user/js/form-advanced-demo.js"></script>
+	    
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+    	<div class="row">
+    		<div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>修改资料</h5>
+                    </div>
+                    <div class="ibox-content">
+                    	<form method="get" action="#" class="form-horizontal">
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">姓名：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="admin">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">入职时间：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="1970-01-01" disabled="disabled">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">部门：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="编辑部" disabled="disabled">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">职位：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="超级管理员" disabled="disabled">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">生日：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的生日">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">Email：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的Email">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">电话：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的电话">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">手机：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的手机">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">MSN：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的MSN">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">QQ：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的QQ">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">登录次数：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的地址">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">注册时间：</label>
+							    <div class="col-sm-7">
+							      <input type="text" class="form-control" id="name" placeholder="请输入您的邮编">
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                    			<label for="name" class="col-sm-3 control-label">头像：</label>
+							    <div class="col-sm-7">
+							    	<div class="row">
+			                            <div class="col-md-12">
+			                                <h4>图片预览：</h4>
+			                                <div class="img-preview img-preview-sm"></div>
+			                                <h4>说明：</h4>
+			                                <p>
+			                                    你可以选择新图片上传，然后下载裁剪后的图片
+			                                </p>
+			                                <div class="btn-group">
+			                                    <label title="上传图片" for="inputImage" class="btn btn-primary">
+			                                        <input type="file" accept="image/*" name="file" id="inputImage" class="hide"> 上传新图片
+			                                    </label>
+			                                    <label title="下载图片" id="download" class="btn btn-primary">下载</label>
+			                                </div>
+			                                <h4>其他说明：</h4>
+			                                <p>
+			                                    <mark style="font-size: 12px;">注：允许上传图格式为JPG，BMP，GIF，PNG文件大小不可超过2048K</mark>
+			                                </p>
+			                                <div class="btn-group">
+			                                    <button class="btn btn-white" id="zoomIn" type="button">放大</button>
+			                                    <button class="btn btn-white" id="zoomOut" type="button">缩小</button>
+			                                    <button class="btn btn-white" id="rotateLeft" type="button">左旋转</button>
+			                                    <button class="btn btn-white" id="rotateRight" type="button">右旋转</button>
+			                                    <button class="btn btn-warning" id="setDrag" type="button">裁剪</button>
+			                                </div>
+			                            </div>
+			                            <div class="col-md-6">
+			                                <div class="image-crop">
+			                                    <img src="{{url('/')}}/staticadmin/apps/system/img/p1.jpg">
+			                                </div>
+			                            </div>
+							    	</div>
+							    </div>
+                    		</div>
+                    		<div class="hr-line-dashed"></div>
+                    		<div class="form-group">
+                                <div class="col-sm-7 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">保存内容</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                        	</div>
+                    </div>
+                </div>
+            </div>
+    		<div class="col-sm-8">
+            <!--ibox 开始 -->
+            <div class="ibox">
+            	<!--ibox-content 开始 -->
+                <div class="ibox-content">
+                    <span class="text-muted small pull-right">上次登录：<i class="fa fa-clock-o"></i> 2016-09-01 12:00</span>
+                    <h2>用户资料</h2>
+                    <!--操作事项开始 -->
+                    <div class="clients-list">
+                        <ul class="nav nav-tabs">
+                            <span class="pull-right small text-muted">登录次数</span>
+                            <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i>全部</a>
+                            </li>
+                            <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i>今日</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-3"><i class="fa fa-briefcase"></i>昨日</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-4"><i class="fa fa-briefcase"></i>本周</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-5"><i class="fa fa-briefcase"></i>本月</a></li>
+                        </ul>
+                    </div>
+                    <!--操作事项结束 -->
+                    <!--表格开始 -->
+					<div class="tab-content">
+                        <table id="table" class="table table-hover">
+				    	</table>
+                    </div>
+                	<!--表格结束 -->
+                	<!--时间轴开始 -->
+                	<div class="client-detail">
+                		<div class="full-height-scroll">
+                			<strong>操作记录</strong>
+                            <div id="vertical-timeline" class="vertical-container light-timeline">
+                                <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon navy-bg">
+                                                <i class="fa fa-briefcase"></i>
+                                        	</div>
+                                    		<div class="vertical-timeline-content">
+                                                <h2>送回收站</h2>
+                                                <p><a href="#">2015-新奥特可爱的IT工程师-Birtv2015-新奥特可爱的IT工程师-IMG_5338.MOV</a></p>
+                                                <a href="#" class="btn btn-sm btn-primary"> 更多信息</a>
+                                                <span class="vertical-date">
+                                    				今天 <br>
+                                    				<small>2015-08-25 18:41</small>
+                                				</span>
+                                            </div>
+                                        </div>
+                                <div class="vertical-timeline-block">
+                                    <div class="vertical-timeline-icon navy-bg">
+                                        <i class="fa fa-briefcase"></i>
+                                	</div>
+                            		<div class="vertical-timeline-content">
+                                        <h2>送回收站</h2>
+                                        <p><a href="#">CMS 发送测试2 有图 有视频</a></p>
+                                        <a href="#" class="btn btn-sm btn-info"> 更多信息</a>
+                                        <span class="vertical-date">
+                            				今天 <br>
+                            				<small>2015-08-25 18:41</small>
+                        				</span>
+                                    </div>
+                                </div>
+                                <div class="vertical-timeline-block">
+                                    <div class="vertical-timeline-icon navy-bg">
+                                        <i class="fa fa-briefcase"></i>
+                                	</div>
+                            		<div class="vertical-timeline-content">
+                                        <h2>送回收站</h2>
+                                        <p><a href="#">BIRTV现场报道-美摄宣传片花.mp4</a></p>
+                                        <a href="#" class="btn btn-sm btn-success"> 更多信息</a>
+                                        <span class="vertical-date">
+                            				今天 <br>
+                            				<small>2015-08-25 15:52</small>
+                        				</span>
+                                    </div>
+                                </div>
+                                <div class="vertical-timeline-block">
+                                    <div class="vertical-timeline-icon navy-bg">
+                                        <i class="fa fa-briefcase"></i>
+                                	</div>
+                            		<div class="vertical-timeline-content">
+                                        <h2>送回收站</h2>
+                                        <p><a href="#">这哥们儿的广场舞水平是相当的高啊-广场舞.mp4</a></p>
+                                        <a href="#" class="btn btn-sm btn-info"> 更多信息</a>
+                                        <span class="vertical-date">
+                            				今天 <br>
+                            				<small>2015-08-25 15:52</small>
+                        				</span>
+                                    </div>
+                                </div>
+                                <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon navy-bg">
+                                                <i class="fa fa-briefcase"></i>
+                                        	</div>
+                                    		<div class="vertical-timeline-content">
+                                                <h2>删除项目</h2>
+                                                <p>今天删除了XXX项目</p>
+                                                <span class="vertical-date">
+                                    				今天 <br>
+                                    				<small>2月3日</small>
+                                				</span>
+                                            </div>
+                                        </div>
+							</div>
+                		</div>
+                	</div>
+                	<!--时间轴结束 -->
+                </div>
+                <!--ibox-content 结束 -->
+            </div>
+            <!--ibox 结束 -->
+        </div>
+   		</div>
+	</div>
+<script>
+	/*设置变量*/
+    var 	$table = $('#table'),
+        	$remove = $('#remove'),
+        	$add=$('#add'),
+        	selections = [];
+        	
+    /*初始化函数*/   	
+    function initTable() {
+        $table.bootstrapTable({
+        	height: getHeight(),
+        	url: 'tool_operationLog.json',
+		    method: 'get',
+		    toolbar: '#toolbar',
+		    pagination: true,
+		    sidePagination: "server",
+		    queryParamsType: 'page',
+		    pageNumber:1,
+		    pageSize: 10,
+		    pageList: [10, 25, 50, 100],
+		    search: true,
+		    sortable:true,
+		    idField:"logid",
+		    showColumns: true,
+		    showRefresh: true,
+		    responseHandler:responseHandler,
+            columns: [{
+		        field: 'choose',
+		        checkbox: true,
+		        align: 'center',
+		        valign: 'middle'
+		    }, 
+		    {
+		        title: 'ID',
+		        field: 'logid',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '操作人',
+		        field: 'username',
+		        align: 'center',
+		        valign: 'middle',
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '链接地址',
+		        field: 'url',
+		        align: 'center',
+		        valign: 'middle',
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '操作时间',
+		        field: 'time',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '操作IP',
+		        field: 'ip',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		    	title: '管理操作',
+		    	field: 'operate',
+		        align: 'center',
+		        valign: 'middle',
+		        events: operateEvents,
+		        formatter: operateFormatter
+			}
+		]
+    });
+    
+    /*删除按钮的状态*/ 
+    $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        selections = getIdSelections();
+    });
+    
+    /*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'logid',
+		                values: ids
+		            });
+		             $remove.prop('disabled', true);
+                }
+            });
+        });
+}
+    
+    /*对响应体操作*/ 
+	function responseHandler(res) {
+		return res.total?{"rows": res.data,"total": res.total}:{"rows": [],"total": 0}
+	};
+    
+    /*获取元素的userid*/
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.logid
+        });
+    }
+    
+	/*获取元素的data数据*/ 
+    function getData(){
+        return $table.bootstrapTable('getData')
+    };
+    
+     /*获取表格的高度*/ 
+    function getHeight() {
+        return $(window).height();
+    };
+    
+    /*获取全部表格个数*/
+    function totalTextFormatter(data) {
+        return 'Total';
+    };
+    
+	/*toolbar操作*/ 
+    $('#toolbar .dropdown-menu a').on('click',function(){
+    	$(this).parents('ul').children().removeClass('active');
+    	$(this).parent('li').addClass('active');
+    	var btnHtml=$(this).html()+'<span class="caret" style="margin-left:15px;"></span>';
+    	$(this).parents('ul').siblings('button').html(btnHtml);
+    	if($(this).data('field')=='department'||$(this).data('field')=='role'){
+    		var dfh=$(this).html();
+    		var gD=getData();
+    		var arr=[];
+    		$.each(gD,function(i,n){
+    			if(gD[i].department==dfh||gD[i].role==dfh){
+    				arr.push(i)
+    			}
+    		})
+    		for(var i=0;i<getData().length;i++){
+    			 $table.bootstrapTable('hideRow', {
+                	index:i
+            	});
+    		}
+    		$.each(arr,function(i,item){
+    			$table.bootstrapTable('showRow', {
+                	index:arr[i]
+           		});
+    		})
+    	}
+    	if($(this).html()=="所有部门"||$(this).html()=="所有角色"){
+    		$.each(getData(),function(i,n){
+    			$table.bootstrapTable('showRow', {
+                	index:i
+           		});
+    		})
+    	}
+    })
+	
+	/*动态添加操作栏*/
+    function operateFormatter(value, row, index) {
+        return [
+             '<a class="btn .child"  title="点击进入子集" style="border:none;background:none" href="powerSettings_admin_child.html" target="_blank">',
+            '<i class="glyphicon glyphicon-link"></i>',
+            '</a>',
+            '<button class="btn remove"  title="删除" style="border:none;background:none">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</button>'
+        ].join('');
+    };
+    
+    /*给操作栏添加点击行为*/ 
+    window.operateEvents = {
+        'click .remove': function (e, value, row, index) {
+        	swal({
+                title: "确认删除吗？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1ab394",
+                confirmButtonText: "是，删除",
+                cancelButtonText: "不，取消",
+                closeOnConfirm: false,
+                closeOnCancel: true 
+        		},
+                function (isConfirm) {
+                    if (isConfirm) {
+                       	swal("Deleted!", "你的记录删除成功", "success");
+                      	$table.bootstrapTable('remove', {
+			                field: 'logid',
+			                values: [row.logid]
+			            });
+                    }
+                });
+        }
+    };
+   
+    /*DOM加载完成执行初始化函数*/
+    $(function(){
+    	initTable();
+    });
+    
+</script>
+
+ <script>
+ 	$(function(){
+ 		$(".full-height-scroll").slimScroll({height:"100%"})
+ 	})
+ </script> 	
+	</body>
+</html>

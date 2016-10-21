@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>我的主页</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link rel="shortcut icon" href="favicon.ico">
+	    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+	    	
+	    <!-- 外部插件——消息提醒弹窗CSS -->
+		<link href="http://admin.nmop.cn/static/admin/apps/user/css/gritter/jquery.gritter.css" rel="stylesheet">
+         
+		<!-- 公用 JS -->
+	    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+	    <!-- 外部插件——图表插件JS-->
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/flot/jquery.flot.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/flot/jquery.flot.pie.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/flot/jquery.flot.tooltip.min.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/flot/jquery.flot.spline.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/flot/jquery.flot.resize.js"></script>
+	    
+	    <!-- 外部插件——jQuery-ui可拖拽插件JS-->
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/jquery-ui/jquery-ui.min.js"></script>
+	    
+	    <!-- 外部插件——图表插件JS-->
+    	<script src="http://admin.nmop.cn/static/admin/apps/user/js/easypiechart/jquery.easypiechart.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/apps/user/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/apps/user/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/apps/user/js/easyPieChart.js"></script>
+    	
+    	<!-- 外部插件——消息提醒弹窗插件JS-->
+	    <script src="http://admin.nmop.cn/static/admin/apps/user/js/gritter/jquery.gritter.min.js"></script>
+	    
+    	<!-- 自定义——未读消息弹窗JS-->
+    	<script src="http://admin.nmop.cn/static/admin/apps/user/js/myindex.script.js"></script>
+    	
+    	<!-- 自定义——未读消息弹窗JS-->
+    	<script src="http://admin.nmop.cn/static/admin/apps/myindex/js/content.js"></script>
+    	
+	</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<!--<h3>我的主页</h3>-->
+			<ul class="breadcrumb">
+			  <li><a href="index.html">我的主页</a></li>
+			  <li class="active"></li>
+			</ul>
+		</div>
+    	<div class="wrapper wrapper-content">
+        	<div class="row">
+            	<div class="col-md-6">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-title">
+	                        <h5>我的信息</h5>
+	                        <div class="ibox-tools">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content contact-box">
+		                    <a href="profile.html">
+		                        <div class="col-sm-4" style="margin-top: 50px;">
+		                            <div class="text-center">
+		                                <img alt="image" class="m-t-xs img-responsive" src="http://admin.nmop.cn/static/admin/apps/system/img/logo.png">
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-8">
+		                            <h3><strong>Admin</strong></h3>
+		                            <p>部门：<i class="profile-color">编辑部</i></p>
+		                            <p>角色：<i class="profile-color">超级管理员</i></p>
+		                            <p>发稿：<i class="profile-color">0</i></p>
+		                            <p>PV：<i class="profile-color">....</i></p>
+		                            <p>最近登录:<time>2016-03-07 14:47(127.0.0.1-LAN)</time>&nbsp;&nbsp;&nbsp;登录：<time>1314</time>次</p>
+		                        </div>
+		                        <div class="clearfix"></div>
+		                    </a>
+	                    </div>
+	                </div>
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-title clearfix">
+	                        <ul class="nav nav-pills">
+								<li><a href="#" style="font-weight: 600; color:inherit;padding: 0 20px;">稿件审核</a></li>
+								<li><a href="#" style="font-weight: 600; color:inherit;padding: 0 20px">送件审核</a></li>
+								<li><a href="#" style="font-weight: 600; color:inherit;padding: 0 20px">用户投稿</a></li>
+							</ul>
+	                        <div class="ibox-tools" style="margin-top: -35px;">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content no-padding">
+		                    <div class="table-responsive">
+		                        <table class="table table-striped">
+		                            <tbody>
+		                                <tr>
+		                                    <td>
+		                                        <input type="checkbox" checked class="i-checks" name="input[]">
+		                                    </td>
+		                                    <td>青春正能量</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>
+		                                        <input type="checkbox" checked class="i-checks" name="input[]">
+		                                    </td>
+		                                    <td>青春正能量</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>
+		                                        <input type="checkbox" checked class="i-checks" name="input[]">
+		                                    </td>
+		                                    <td>青春正能量</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>
+		                                        <input type="checkbox" checked class="i-checks" name="input[]">
+		                                    </td>
+		                                    <td>青春正能量</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>
+		                                        <input type="checkbox" checked class="i-checks" name="input[]">
+		                                    </td>
+		                                    <td>青春正能量</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                            </tbody>
+                        		</table>
+                    		</div>
+
+	                    </div>
+	                </div>
+            		<div class="ibox float-e-margins">
+	                    <div class="ibox-title clearfix">
+	                        <h5>最新内容</h5>
+	                        <div class="ibox-tools">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content no-padding">
+		                    <div class="table-responsive">
+		                        <table class="table table-striped">
+		                            <tbody>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>[欧美影院]克拉恋人</td>
+		                                    <td class="pull-right"><time class="date">2015-03-23</time></td>
+		                                </tr>
+		                            </tbody>
+                        		</table>
+                    		</div>
+
+	                    </div>
+	                </div>
+            	</div>
+            	<div class="col-md-6">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-title">
+	                        <h5>综合统计</h5>
+	                        <div class="ibox-tools">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                        <div class="ibox-tools">
+	                            <span class="label label-warning-light">10条未读</span>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content no-padding">
+							<div class="table-responsive">
+		                        <table class="table table-bordered">
+		                            <tbody>
+		                                <tr>
+		                                    <td>栏目</td>
+		                                    <td>217</td>
+		                                    <td>管理员</td>
+		                                    <td>8</td>
+		                                    <td>部门</td>
+		                                    <td>2</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>会员</td>
+		                                    <td>33</td>
+		                                    <td>待审会员</td>
+		                                    <td>1</td>
+		                                    <td>今日注册</td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>访问</td>
+		                                    <td>x</td>
+		                                    <td>今日访问</td>
+		                                    <td>xxx</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                </tr>
+		                                <tr>
+		                                    <td>内容</td>
+		                                    <td>3415</td>
+		                                    <td>待审内容</td>
+		                                    <td>104</td>
+		                                    <td>今日发布</td>
+		                                    <td>0</td>
+		                                </tr>
+		                            </tbody>
+                        		</table>
+                    		</div>
+	                    </div>
+	                </div>
+	              
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-title">
+	                        <h5>内容统计</h5>
+	                        <div class="ibox-tools">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content no-padding">
+							<div class="table-responsive">
+		                        <table class="table table-bordered">
+		                            <tbody>
+		                            	<tr>
+		                        			<td></td>
+		                        			<td>今日</td>
+		                        			<td>昨日</td>
+		                        			<td>本周</td>
+		                        			<td>本月</td>
+		                        			<td>全部</td>
+		                        		</tr>
+		                                <tr>
+		                                    <td>天山云TV</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>自有资源</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>云电影</td>
+		                                    <td>云电视剧</td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>内容汇聚</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>院线</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云电影</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云电视剧</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云综艺</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云动漫</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云纪录片</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                                <tr>
+		                                    <td>云娱乐</td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td></td>
+		                                    <td>0</td>
+		                                </tr>
+		                            </tbody>
+                        		</table>
+                    		</div>
+	                    </div>
+	                </div>
+	                
+            	</div>
+        	</div>
+        	
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-title">
+	                        <h5>综合统计</h5>
+	                        <div class="ibox-tools">
+	                            <a class="collapse-link">
+	                                <i class="fa fa-chevron-up"></i>
+	                            </a>
+	                            <a class="close-link">
+	                                <i class="fa fa-times"></i>
+	                            </a>
+	                        </div>
+	                        <div class="pull-right">
+	                            <div class="btn-group">
+	                                <button type="button" class="btn btn-xs btn-white active">天</button>
+	                                <button type="button" class="btn btn-xs btn-white">月</button>
+	                                <button type="button" class="btn btn-xs btn-white">年</button>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content">
+	                        <div class="row">
+	                            <div class="col-sm-9">
+	                                <div class="flot-chart">
+	                                    <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+	                                </div>
+	                            </div>
+	                            <div class="col-sm-3">
+	                                <ul class="stat-list">
+	                                    <li>
+	                                        <h2 class="no-margins ">4,422</h2>
+	                                        <small>最近一个月访问量</small>
+	                                        <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i>
+	                                        </div>
+	                                        <div class="progress progress-mini">
+	                                            <div style="width: 60%;" class="progress-bar"></div>
+	                                        </div>
+	                                    </li>
+	                                    <li>
+	                                        <h2 class="no-margins ">70</h2>
+	                                        <small>最近一个月评论数</small>
+	                                        <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i>
+	                                        </div>
+	                                        <div class="progress progress-mini">
+	                                            <div style="width: 22%;" class="progress-bar"></div>
+	                                        </div>
+	                                    </li>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+    	</div>
+    	
+  	</body>
+</html>

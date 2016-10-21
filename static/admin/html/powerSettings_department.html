@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权限设置——部门</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    	
+	<!-- 公用CSS -->
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    	
+    <!-- 外部插件——bootstrap表格插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.css" rel="stylesheet">
+	
+	<!-- 外部插件——消息提示插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet">
+		
+	<!-- 外部插件——表单选择框插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/iCheck/custom.css" rel="stylesheet">
+		
+	<!-- 公用 JS -->
+    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.min.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+	<!-- 外部插件——bootstrap表格插件JS-->
+	<script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    
+    <!-- 外部插件——JQ表单验证插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+    
+    <!-- 外部插件——消息提示插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script>
+    
+    <!-- 外部插件——表单选择框插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/iCheck/icheck.min.js"></script>
+</head>
+<body class="gray-bg">
+	<div class="page-heading" style="padding: 20px;">
+		<h3>设置</h3>
+		<ul class="breadcrumb">
+		  <li><a href="globalConfig_siteInfo.html">权限设置</a></li>
+		  <li class="active">部门</li>
+		</ul>
+	</div>
+	<!--body wrapper start-->
+    <div class="wrapper wrapper-content animated fadeInRight">
+    	<div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <!--tab-content start-->
+                        <div class="tab-content">	
+                    		<!--exampleTableEventsToolbar start-->
+                    		<div class="btn-group hidden-xs">
+                            	<div class="row">
+                            		<div class="col-md-12">
+                            			<div id="toolbar">
+		                        			<button type="button" class="btn btn-primary"  id="addBtn" data-toggle="modal" data-target="#addModal">
+									   			<i class="glyphicon glyphicon-plus"></i>添加
+									   		</button>
+									        <button id="remove" class="btn btn-primary" disabled>
+									            <i class="glyphicon glyphicon-remove"></i> 删除
+									        </button>
+									        <button id="prev" data-url="" class="btn btn-primary" href="javascript:void(0)">
+									            <i class="glyphicon glyphicon-arrow-left"></i> 返回上一级
+									        </button>
+									    </div>
+                            		</div>
+                            	</div>
+                           </div>
+                    		<!--texampleTableEventsToolbar end-->
+                    		
+                    		<!--exampleTableEvents start-->
+                            <table id="table">
+                            </table>
+                    		<!--exampleTableEvents end-->	
+                        </div>
+                        <!--tab-content end-->
+                    </div><!--ibox-content end-->
+                </div><!--ibox end-->
+            </div><!--col-sm-12 end-->
+        </div><!--row end-->
+    </div>
+    <!--body wrapper end-->
+	<div id="errorMsg" style="font-size: 30px; color: red; text-align: center;"></div>    
+<!--添加部门模态弹出框 开始-->
+<div class="modal" id="addModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">添加部门</h4>
+			</div>
+			<div class="modal-body">
+                <form class="form-horizontal" id="addDepartmentForm" method="get" action="#">
+            		<div class="form-group">
+                        <label class="col-sm-3 control-label">部门名称：</label>
+                        <div class="col-sm-8">
+                            <input id="aname" name="name" minlength="2" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">上级部门：</label>
+                        <div class="col-sm-8">
+                            <div class="btn-group">
+					   			<button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <span>所有部门</span><span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									    <li><a href="#">所有部门</a></li>
+									    <li class="divider"></li>
+									    <li><a href="#" data-field="department">技术部</a></li>
+									    <li><a href="#" data-field="department">编辑部</a></li>
+								</ul>
+					   		</div>
+                        </div>
+                    </div>
+                </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="submit1">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--添加菜单模态弹出框 结束-->
+	    
+<!--编辑部门模态弹出框 开始-->
+<div class="modal" id="editModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">编辑部门</h4>
+			</div>
+			<div class="modal-body">
+                <form class="form-horizontal" id="editDepartmentForm" method="get" action="#">
+                	<div class="form-group">
+                        <label class="col-sm-3 control-label">部门名称：</label>
+                        <div class="col-sm-8">
+                            <input id="ename" name="name" minlength="2" type="text" class="form-control" required  aria-required="true">
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+            			<label for="name" class="col-sm-3 control-label">角色：</label>
+					    <div class="col-sm-7">
+                            <select class="form-control m-b" name="role" required="required" id="role"> 
+                            	<option value="adminRole">超级管理员</option>
+                                <option value="leaderRole">总编辑</option>
+                                <option value="internRole">实习编辑</option>
+                                <option value="handlerRole">操作员</option>
+                                <option  value="remoteRole">远程用户组</option>
+                            </select>
+					    </div>
+            		</div>
+            		<div class="hr-line-dashed"></div>
+                    <div class="form-group">
+            			<label for="name" class="col-sm-3 control-label">部门：</label>
+					    <div class="col-sm-7">
+                            <select class="form-control m-b" name="department" required="required" id="department">
+                            	<option>———</option>
+                                <option value="techDepartment">技术部</option>
+                                <option value="editDepartment">编辑部</option>
+                            </select>
+					    </div>
+            		</div>
+                </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="submit2">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--编辑部门模态弹出框 结束-->
+
+<!--添加设置角色模态弹出框 开始-->
+<div class="modal" id="addRoleModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">设置<mark style="color: #009F95;" id="settingDepartment">技术部</mark>角色</h4>
+			</div>
+			<div class="modal-body">
+                <form class="form-horizontal" id="settingDepartmentForm" method="get" action="#">
+            		<div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-3">
+                            <div class="checkbox i-checks">
+                            	<label><input type="checkbox" value="超级管理员"> <i></i>超级管理员</label>
+                            </div>
+                            <div class="checkbox i-checks">
+                                <label><input type="checkbox" value="总编辑"> <i></i>总编辑</label>
+                            </div>
+                            <div class="checkbox i-checks">
+                                <label>
+                                    <input type="checkbox" value="实习编辑"> <i></i>实习编辑</label>
+                            </div>
+                            <div class="checkbox i-checks">
+                                <label><input type="checkbox" value="操作员"> <i></i>操作员</label>
+                            </div>
+                            <div class="checkbox i-checks">
+                                <label><input type="checkbox" value="远程管理组"> <i></i>远程用户组</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="submit3">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--添加菜单模态弹出框 结束-->
+<script type="text/javascript">
+function initTable(){
+	$('#table').bootstrapTable({
+	    url: 'powerSettings_department.json',
+	    method: 'get',
+	    toolbar: '#toolbar',
+	    cache: false,
+	    pagination: true,
+	    sortOrder: "asc",
+	    sidePagination: "server",
+	    queryParamsType: 'page', //
+	    pageNumber:1,
+	    pageSize: 10,
+	    pageList: [10, 25, 50, 100],
+	    search: true,
+	    showColumns: true,	
+	    showRefresh: true,
+	    clickToSelect: true,
+	    responseHandler:responseHandler,
+	    columns: [{
+	        field: 'state',
+	        checkbox: true,
+	        align: 'center',
+	        valign: 'middle'
+	    }, 
+	    {
+	        title: 'ID',
+	        field: 'departmentid',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    }, 
+	    {
+	        title: '名称',
+	        field: 'name',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    }, 
+	    {
+	        title: '主管角色',
+	        field: 'rolename',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    },
+	    {
+	        title: '人数',
+	        field: 'numpeople',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    },
+	    {
+	    	title: '管理操作',
+	    	field: 'operate',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        events:operateEvents,
+			formatter:operateFormatter
+	    }]
+	});
+	
+}
+/*对响应体操作*/ 
+function responseHandler(res) {
+    if(res.total > 0) {
+    	if(res.data[0].parentid == "" || res.data[0].parentid == null){
+    		$('#prev').hide();
+	    }
+	 return {
+	    "rows": res.data,
+	    "total": res.total
+	 	}
+    } else {
+		return {
+		    "rows": [],
+		    "total": 0
+		}
+    }
+};
+
+/*获取全部表格个数*/
+function totalTextFormatter(data) {
+    return 'Total';
+};
+
+/*获取元素的userid*/
+function getIdSelections() {
+    return $.map($('#table').bootstrapTable('getSelections'), function (row) {
+        return row.departmentid;
+    });
+}
+
+/*获取元素的data数据*/
+function getData(){
+    return $('#table').bootstrapTable('getData')
+};
+
+/*删除按钮的状态*/
+$('#table').on('check.bs.table uncheck.bs.table ' +
+                 'check-all.bs.table uncheck-all.bs.table', function () {
+    $("#remove").prop('disabled', !$('#table').bootstrapTable('getSelections').length);
+    selections = getIdSelections();
+});
+
+/*点击删除按钮*/
+$("#remove").click(function () {
+    var ids = getIdSelections();
+    swal({
+        title: "确认删除吗？",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#1ab394",
+        confirmButtonText: "是，删除",
+        cancelButtonText: "不，取消",
+        closeOnConfirm: false,
+        closeOnCancel: true 
+		},
+    function (isConfirm) {
+        if (isConfirm) {
+           	swal("Deleted!", "你的记录删除成功", "success");
+          	$('#table').bootstrapTable('remove', {
+                field: 'departmentid',
+                values: ids
+            });
+            $("#remove").prop('disabled', true);
+        }
+	});
+});
+	
+/*动态添加操作栏*/
+function operateFormatter(value, row, index) {
+    return [
+        '<button class="btn edit"  title="点击编辑" style="border:none;background:none" data-toggle="modal">',
+        '<i class="glyphicon glyphicon-edit"></i>',
+        '</button>',
+        '<button class="btn remove"  title="点击删除" style="border:none;background:none">',
+        '<i class="glyphicon glyphicon-remove"></i>',
+        '</button>',
+        '<button class="btn add"  title="点击添加角色" style="border:none;background:none">',
+        '<i class="glyphicon glyphicon-plus"></i>',
+        '</button>',
+        '<a class="btn child"  title="点击进入子集" style="border:none;background:none" href="javascript:void(0)">',
+        '<i class="glyphicon glyphicon-link"></i>',
+        '</a>'
+    ].join('');
+};
+    
+/*给操作栏添加点击行为*/ 
+window.operateEvents = {
+   	'click .edit':function (e, value, row, i) {
+   		$("#editModal").modal("toggle");
+   		$('#ename').val(row.name);
+   		$('#department option').each(function(){
+   			if($(this).html()==row.rolename){
+   				$(this).attr('selected','selected')
+   			}
+   		})
+    },
+    'click .remove': function (e, value, row, index) {
+    	swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$('#table').bootstrapTable('remove', {
+		                field: 'departmentid',
+		                values: [row.departmentid]
+		            });
+                }
+            });
+    },
+    'click .add':function (e, value, row, i) {
+   		$("#addRoleModal").modal("toggle");
+   		$('#settingDepartment').html(row.name);
+   		$.each($('.i-checks input'),function(index,n){
+   			if($(this).val()==row.childids[0].name){
+   				$('.icheckbox_square-green').removeClass('checked');
+   				$(this).parent().addClass('checked');
+   			}
+   		})
+    },
+    'click .child':function(e, value, row, index){
+   		//添加菜单时需要的父级ID
+   		$("#prev").data("url",'{{url("powerSettings_department.json")}}??departmentid='+row.departmentid);
+   		var childUrl='{{url("powerSettings_role.json")}}?parentid='+row.departmentid;
+			$('#table').bootstrapTable('refresh',{
+   				url:childUrl
+       });
+       	$('#prev').show();
+    }
+};
+
+/*点击返回上一级时*/ 
+$('#prev').on('click',function(){
+    	if(getData()[0] == undefined || getData()[0] .constructor !=Object){
+    		var parentUrl= $(this).data('url');
+	    	$table.bootstrapTable('refresh',{
+			   		url:parentUrl
+			});	
+    	}else{
+    		if(getData()[0].parentid == "" || getData()[0].parentid == null){
+    			$(this).hide();
+    		}else{
+    			var departmentid=getData()[0].parentid;
+	    		var parentUrl='http://admin.nmop.cn/system/menu/index/list?&departmentid='+departmentid;
+		    	$table.bootstrapTable('refresh',{
+			   		url:parentUrl
+			    });	
+    		}
+    	}
+	});
+
+/*点击添加部门验证*/ 
+$.ajaxSetup({
+    type:"POST",
+	cache:false,
+	dataType: "json",
+	success:function(msg){
+		$('#table').bootstrapTable('load',msg);
+	},
+	error:function(data, textStatus, xhr){
+		console.log(data.status+"错误")
+		$('#errorMsg').html(data.status+"错误");
+	}
+});	
+/*提交添加部门表单*/ 
+$("#submit1").bind("click", function(){
+	var addAdmin1=$('#addDepartmentForm').serialize();
+		$.ajax({
+		url:"xxx.json",
+		data:addAdmin1
+	});
+});
+/*提交编辑部门表单*/ 
+$("#submit2").bind("click", function(){
+	var addAdmin2=$('#editDepartmentForm').serialize();
+		$.ajax({
+		url:"xxx.json",
+		data:addAdmin2
+	});
+});
+/*提交设置角色表单*/ 
+$("#submit3").bind("click", function(){
+	var addAdmin2=$('#settingDepartmentForm').serialize();
+		$.ajax({
+		url:"xxx.json",
+		data:addAdmin2
+	});
+})
+
+/*点击初始化函数*/
+$(function(){
+	initTable();
+	/*单选复选样式插件*/ 
+	$(".i-checks").iCheck({
+		checkboxClass:"icheckbox_square-green",
+		radioClass:"iradio_square-green"
+	});
+})
+</script>
+</body>
+	
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>全局设置——站点信息</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link rel="shortcut icon" href="favicon.ico">
+	    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+	    <base target="_blank">
+	    	
+		<!-- 公用 JS -->
+	    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+    	<!-- 自定义——goHome弹球JS -->
+		<script src="http://admin.nmop.cn/static/admin/apps/settings/js/goHome.js"></script>
+    	
+	</head>
+	<bodyclass="gray-bg">
+			<div class="page-heading" style="padding: 20px;">
+				<h3>设置</h3>
+				<ul class="breadcrumb">
+				  <li><a href="globalConfig_siteInfo.html.html">全局设置</a></li>
+				  <li class="active">站点信息</li>
+				</ul>
+			</div>
+		<!--body wrapper start-->
+	    <div class="row wrapper wrapper-content animated fadeInRight">
+	    	<div class="col-sm-12">
+            	<div class="ibox float-e-margins">
+            		<div class="ibox-title">
+                        <h5>站点信息</h5>
+                    </div>
+            		<div class="ibox-content">
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">网站名称：</label>
+								<div class="col-sm-10">
+			                        <input type="text" placeholder="酷爽TV内容管理平台" class="form-control" >	
+						        </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">网站地址：</label>
+								<div class="col-sm-10">
+			                        <input type="text" placeholder="http://kstv.gzcbn.tv" class="form-control" >	
+						        </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">访问统计代码：</label>
+                                <div class="col-sm-10">
+                                	<textarea cols="40" rows="8" placeholder="请在这里输入注册协议内容"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                            	<label class="col-sm-2 control-label">网站关闭：</label>
+
+                                <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                        <input type="radio" value="option1" id="inlineCheckbox1" name="optionsRadios">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" value="option2" id="inlineCheckbox2" name="optionsRadios" checked="checked">否</label>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                            	<label class="col-sm-2 control-label">关闭原因：</label>
+                                <div class="col-sm-10">
+                                	<textarea cols="40" rows="8" placeholder="网站维护，请稍后访问"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                            	<label class="col-sm-2 control-label">权重提示：</label>
+                                <div class="col-sm-10">
+                                	<textarea cols="40" rows="8"  placeholder="80|上首页频道滚动列表、专栏首页推荐文章 A\85|上首页图片速读、视频新闻、活动 / 90|上首页频道头条推荐"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                            	<label class="col-sm-2 control-label">关闭注册时显示：</label>
+                                <div class="col-sm-10">
+                                	<textarea cols="40" rows="8" placeholder="注册已关闭"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                            	<label class="col-sm-2 control-label">默认权重值：</label>
+                                <div class="col-sm-10">
+                                	<input type="email" placeholder="60" class="form-control" style="display: inline-block; width: 50px;">（0-100）
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">保存内容</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>	
+                            </div>
+                        </form>
+						                    
+                    </div>
+	            </div>
+            </div>
+		</div><!--body wrapper start-->
+		
+	</body>
+</html>

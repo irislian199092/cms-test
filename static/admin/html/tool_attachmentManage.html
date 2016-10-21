@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>附件管理</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    	
+	<!-- 公用CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    
+    <!-- 公用 JS -->
+    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!-- 自定义——鼠标移入放大JS -->
+	<script src="http://admin.nmop.cn/static/admin/apps/tools/js/tool.scripts.js"></script>
+	
+</head>
+<body class="gray-bg">
+	<div class="page-heading" style="padding: 20px;">
+		<h3>工具</h3>
+		<ul class="breadcrumb">
+		  <li><a href="tool_dataOptimize.html">工具</a></li>
+		  <li class="active">附件管理</li>
+		</ul>
+	</div>
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="file-manager">
+                            <h4>显示方式：</h4>
+                            <a href="tool_attachmentManage.html#" class="file-control active">缩略图</a>
+                            <a href="tool_attachmentManage.html#" class="file-control">列表</a>
+                            <div class="hr-line-dashed"></div>
+                            <button class="btn btn-primary btn-block">添加目录</button>
+                            <h4 style="padding-top: 10px;">我的文档</h4>
+                            <div class="hr-line-dashed"></div>
+                            <h4>常用目录</h4>
+                            <ul class="folder-list" style="padding: 0">
+                                <li><a href="tool_attachmentManage.html"><i class="fa fa-folder"></i> 栏目</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html"><i class="fa fa-folder"></i> TV</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html"><i class="fa fa-folder"></i> 台标LOGO</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html"><i class="fa fa-folder"></i>主持人</a>
+                                </li>
+                            </ul>
+                            <h4 class="tag-title" style="margin-top: 20px;">操作</h4>
+                            <ul class="tag-list" style="padding: 0">
+                            	<li>
+                            		<div class="input-group">
+								      <input type="text" class="form-control" placeholder="请输入搜索内容">
+								      <span class="input-group-btn">
+								        <button class="btn btn-primary" type="button">搜索</button>
+								      </span>
+								    </div><!-- /input-group -->
+                                </li>
+                                <li><a href="tool_attachmentManage.html" class="btn btn-primary">全选</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html" class="btn btn-primary">反选</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html" class="btn btn-primary">批量上传</a>
+                                </li>
+                                <li><a href="tool_attachmentManage.html" class="btn btn-primary">刷新</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10 animated fadeInRight">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+                                    <div class="icon">
+                                        <i class="fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                         <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                    	<label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-music"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="img-responsive fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <a href="tool_attachmentManage.html#">
+                                <div class="file">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-file"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-music"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="img-responsive fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <a href="tool_attachmentManage.html#">
+                                <div class="file">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-file"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-music"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="image">
+                                        <img alt="image" class="img-responsive" src="http://admin.nmop.cn/static/admin/apps/tools/img/p1.jpg">
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="img-responsive fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <a href="tool_attachmentManage.html#">
+                                <div class="file">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="img-responsive fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <a href="tool_attachmentManage.html#">
+                                <div class="file">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="tool_attachmentManage.html#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="img-responsive fa fa-film"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="file-box">
+                            <a href="tool_attachmentManage.html#">
+                                <div class="file">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                    </div>
+                                    <div class="file-name">
+                                        <label class="radio-inline">
+                                    		<input type="radio"/>cctv西语国际
+                                    	</label>
+                                        <br/>
+                                        <small>添加时间：2014-10-13</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </script>
+</body>
+
+</html>

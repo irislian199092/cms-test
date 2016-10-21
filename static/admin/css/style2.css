@@ -1,0 +1,36 @@
+body,div,p,header,h2,h1,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,ul,li,dl,dt,dd,ol,nav,input,footer{ margin:0; padding:0; list-style:none;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both;}
+.clearfix{ *zoom:1;}
+.dn{
+	display: none;
+}
+.menu_a{
+	margin: 100px;
+}
+.menu_a li:last-child{
+	border: none;
+}
+.menu_a li a{
+	height: 35px;
+	line-height: 35px;
+	display: block;
+	cursor: pointer;
+}
+.menu_a li a b{
+	font-size: 14px;
+	padding: 0 10px;
+	display: inline-block;
+}
+.menu_a li a input{
+	outline: none;
+	vertical-align: text-bottom;
+	margin-right: 5px;
+}
+.menu_a li .menu_b,.menu_a li .menu_c,.menu_a li .menu_d{
+	margin-left: 30px;
+	display: none; 
+}
+.menu_a li .menu_d li{
+	float: left;
+	margin-right: 20px;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置——分流设置</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    	
+	<!-- 公用CSS -->
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    	
+    <!-- 外部插件——bootstrap表格插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.css" rel="stylesheet">
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+	
+	<!-- 外部插件——消息提示插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet">
+		
+	<!-- 公用 JS -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+	<!-- 外部插件——bootstrap表格插件JS-->
+	<script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+    
+    <!-- 外部插件——JQ表单验证插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+    
+    <!-- 外部插件——消息提示插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script>
+    
+</head>
+<body class="gray-bg">
+	
+	<!-- 头部面包屑导航开始 -->
+	<div class="page-heading" style="padding: 20px;">
+		<h3>设置</h3>
+		<ul class="breadcrumb">
+		  <li><a href="globalConfig_siteInfo.html">设置</a></li>
+		  <li class="active">分流设置</li>
+		</ul>
+	</div>
+	<!-- 头部面包屑导航结束 -->
+	
+	<!-- 身体包裹层开始 -->
+    <div class="wrapper wrapper-content animated fadeInRight">
+    	<div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <!--tab-content start-->
+                        <div class="tab-content">	
+                    		<!--exampleTableEventsToolbar start-->
+                    		<div class="btn-group hidden-xs" role="group">
+                            	<div class="row">
+                            		<div class="col-sm-12">
+                            			<div id="toolbar">
+		                        			<button type="button" class="btn btn-primary"  id="addBtn" data-toggle="modal" data-target="#addUsergroupModal">
+									   			<i class="glyphicon glyphicon-plus"></i>添加分流
+									   		</button>
+									        <button id="remove" class="btn btn-danger" disabled>
+									            <i class="glyphicon glyphicon-remove"></i> 删除
+									        </button>
+									    </div>
+                            		</div>
+                            	</div>
+                            </div>
+                    		<!--texampleTableEventsToolbar end-->
+                    		
+                    		<!--exampleTableEvents start-->
+                            <table id="table" class="table table-hover">
+					    	</table>
+                    		<!--exampleTableEvents end-->
+                        </div>
+                        <!--tab-content end-->
+						
+                    </div><!--ibox-content end-->
+                </div><!--ibox end-->
+            </div><!--col-sm-12 end-->
+        </div><!--row end-->
+    </div>
+    <!-- 身体包裹层结束 -->
+    
+	 <!-- 错误信息开始 -->
+	<div id="errorMsg" style="font-size: 30px; color: red; text-align: center;"></div>  
+	<!-- 错误信息结束 --> 
+	
+    <!-- 添加用户组模态弹出框开始 -->
+    <div class="modal" id="addUsergroupModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">添加网站分流信息</h4>
+				</div>
+				<div class="modal-body">
+                    <form class="form-horizontal" id="addUsergroupForm">
+                		<div class="form-group">
+                			<label for="username" class="col-sm-3 control-label">分流地址：</label>
+						    <div class="col-sm-7">
+						      <input type="text"  class="form-control" placeholder="请输入您的分流地址" required="required" name="usergroupName">
+						    </div>
+                		</div>
+                		<div class="hr-line-dashed"></div>
+                		<div class="form-group">
+                			<label for="password" class="col-sm-3 control-label">客户端IP地址范围：</label>
+						    <div class="col-sm-7">
+						      <textarea style="width: 100%;" required="required"></textarea>
+						      <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 不能为空，多个网段之间使用英文逗号分隔，如192.168.0.1-192.168.0.255,192.168.1.2-192.168.1.12</span>
+						    </div>
+                		</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="col-sm-offset-3">
+				    	<button type="submit" class="btn btn-primary" id="submit1" data-dismiss="modal">确定</button>
+                    	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- 添加用户模态弹出框结束 -->	
+    
+<script>
+/*设置变量*/
+var 	$table = $('#table'),
+    	$remove = $('#remove'),
+    	$add=$('#add'),
+    	selections = [];
+    	
+/*初始化函数*/   	
+function initTable() {
+    $table.bootstrapTable({
+    	height: getHeight(),
+    	url: 'user_groupsetting.json',
+	    method: 'get',
+	    toolbar: '#toolbar',
+	    pagination: true,
+	    sidePagination: "server",
+	    queryParamsType: 'page',
+	    pageNumber:1,
+	    pageSize: 10,
+	    pageList: [10, 25, 50, 100],
+	    search: true,
+	    sortable:true,
+	    idField:"groupid",
+	    showColumns: true,
+	    showRefresh: true,
+	    showToggle: true,
+	    showPaginationSwitch:true,
+	    responseHandler:responseHandler,
+        columns: [{
+	        field: 'choose',
+	        checkbox: true,
+	        align: 'center',
+	        valign: 'middle'
+	    }, 
+	    {
+	        title: 'ID',
+	        field: 'flowid',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    }, 
+	    {
+	        title: '服务器网站地址',
+	        field: 'address',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    }, 
+	    {
+	        title: '客户端IP地址范围',
+	        field: 'range',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        footerFormatter: totalTextFormatter
+	    },
+	    {
+	    	title: '管理操作',
+	    	field: 'operate',
+	        align: 'center',
+	        valign: 'middle',
+	        sortable: true,
+	        events: operateEvents,
+	        formatter: operateFormatter
+		}
+	]
+});
+
+/*删除按钮的状态*/ 
+$table.on('check.bs.table uncheck.bs.table ' +
+            'check-all.bs.table uncheck-all.bs.table', function () {
+    $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+    selections = getIdSelections();
+});
+
+/*点击删除按钮*/ 
+$remove.click(function () {
+    var ids = getIdSelections();
+    swal({
+        title: "确认删除吗？",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#1ab394",
+        confirmButtonText: "是，删除",
+        cancelButtonText: "不，取消",
+        closeOnConfirm: false,
+        closeOnCancel: true 
+		},
+        function (isConfirm) {
+            if (isConfirm) {
+               	swal("Deleted!", "你的记录删除成功", "success");
+              	$table.bootstrapTable('remove', {
+	                field: 'groupid',
+	                values: ids
+	            });
+	             $remove.prop('disabled', true);
+            }
+        });
+       
+    });
+}
+
+/*对响应体操作*/ 
+function responseHandler(res) {
+	return res.total?{"rows": res.data,"total": res.total}:{"rows": [],"total": 0}
+};
+
+/*获取元素的userid*/
+function getIdSelections() {
+    return $.map($table.bootstrapTable('getSelections'), function (row) {
+        return row.groupid
+    });
+}
+
+/*获取元素的data数据*/ 
+function getData(){
+    return $table.bootstrapTable('getData')
+};
+
+ /*获取表格的高度*/ 
+function getHeight() {
+    return $(window).height();
+};
+
+/*获取全部表格个数*/
+function totalTextFormatter(data) {
+    return 'Total';
+};
+
+/*动态添加操作栏*/
+function operateFormatter(value, row, index) {
+    return [
+    	'<button class="btn edit"  title="点击编辑" style="border:none;background:none" data-toggle="modal">',
+        '<i class="glyphicon glyphicon-edit"></i>',
+        '</button>',
+        '<button class="btn remove"  title="点击删除" style="border:none;background:none">',
+        '<i class="glyphicon glyphicon-remove"></i>',
+        '</button>'
+    ].join('');
+};
+
+/*给操作栏添加点击行为*/ 
+window.operateEvents = {
+   	'click .edit':function (e, value, row, i) {
+   		$("#editUsergroupModal").modal("toggle");
+   		$('#groupName').val(row.name);
+   		$('#groupNote').val(row.remarks);
+    },
+    'click .remove': function (e, value, row, index) {
+    	swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'groupid',
+			                values: [row.groupid]
+			            });
+                    }
+                });
+        }
+    };
+ 
+ /*ajax全局设置*/ 
+	$.ajaxSetup({
+	    type:"POST",
+		cache:false,
+		dataType: "json",
+		success:function(msg){
+			alert('保存信息成功！')
+		},
+		error:function(data, textStatus, xhr){
+			$('#errorMsg').html(data.status+"错误");
+		}
+	});	
+	/*提交添加组表单*/
+	$('#addUsergroupForm').validate({
+		submitHandler:function(){
+			$("#submit1").bind("click", function(){
+				var addAdmin=$('#addUsergroupForm').serialize();
+				$.ajax({
+					url:"xxx.json",
+					data:addAdmin
+				});
+			});
+		}
+	})
+	
+/*DOM加载完成执行初始化函数*/
+$(function(){
+	initTable();
+});
+</script>
+</body>
+</html>
+

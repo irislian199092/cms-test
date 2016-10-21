@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>我的主页</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+
+	<!--common css-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    
+	<!--common js-->
+    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!--external js-->
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/metisMenu/jquery.metisMenu.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/layer/layer.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/hplus.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/contabs.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/system/js/pace/pace.min.js"></script>
+    
+   
+    	
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+    	
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                	<!--nav-header start-->
+                    <li class="nav-header">
+				         <div class="logo profile-element">
+                            <a href="index.html"><img src="http://admin.nmop.cn/static/admin/apps/system/img/logo.png" alt=""></a>
+                        </div>
+				        <div class="logo-element text-center">
+				            <a href="index.html"><img src="http://admin.nmop.cn/static/admin/apps/system/img/logo_icon.png" alt=""></a>
+				        </div>
+                    </li>
+                    <!--nav-header end-->
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">我的主页</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                        	<li>
+                                <a class="J_menuItem" href="myindex.html" data-index="0">我的主页</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="mycontent.html">我的内容</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="mydepartment.html">我的部门</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="mypower.html">我的权限</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="index_v3.html">
+                        	<i class="fa fa-columns"></i> 
+                        	<span class="nav-label">内容</span>
+                        	<span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">
+                                	<span class="nav-label">天山云TV<span class="fa arrow"></span></span>
+                                </a>
+		                        <ul class="nav nav-second-level">
+		                            <li>
+		                            	<a  href="#">自有资源<span class="fa arrow"></span></a>
+		                            	<ul class="nav nav-third-level">
+		                                    <li>
+		                                    	<a href="#">院线<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="TianshanTV_EuropeFilm.html">欧美院线</a></li>
+		                                    		<li><a class="J_menuItem" href="TianshanTV_ChilaFilm.html">华语院线</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a  href="#">视频新闻<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="Videonews_CentralNews.html">中央新闻联播</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_XinjiangNews.html">新疆新闻联播</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_UrumqiNews.html">乌鲁木齐新闻</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_SocialNews.html">大事小事</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li><a class="J_menuItem" href="7.html">直播</a></li>
+		                                    <li><a class="J_menuItem" href="8.html">云直播</a></li>
+		                                    <li><a class="J_menuItem" href="9.html">文字新闻</a></li>
+		                                    <li>
+		                                    	<a href="1.html">特色专题<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="10.html">剧集</a></li>
+		                                    		<li><a class="J_menuItem" href="11.html">电影</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a href="#">哈语<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li>
+		                                    			<a  href="#">电影</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="12.html">动作片</a></li>
+				                                    		<li><a class="J_menuItem" href="13.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="14.html">科幻片</a></li>
+				                                    		<li><a class="J_menuItem" href="15.html">喜剧片</a></li>
+				                                    		<li><a class="J_menuItem" href="16.html">战争片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">电视剧</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="17.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="18.html">情感片</a></li>
+				                                    		<li><a class="J_menuItem" href="19.html">刑侦片</a></li>
+				                                    		<li><a class="J_menuItem" href="20.html">军旅片</a></li>
+				                                    		<li><a class="J_menuItem" href="21.html">历史片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">文艺</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="22.html">阿肯弹唱</a></li>
+				                                    		<li><a class="J_menuItem" href="23.html">晚会</a></li>
+				                                    		<li><a class="J_menuItem" href="24.html">民歌</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">少儿</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="25.html">动画片</a></li>
+				                                    		<li><a class="J_menuItem" href="26.html">动画连续剧</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">新闻</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="27.html">新疆新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="28.html">国际新闻</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a href="#">维语<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li>
+		                                    			<a href="#">电影<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="29.html">动作片</a></li>
+				                                    		<li><a class="J_menuItem" href="30.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="31.html">科幻片</a></li>
+				                                    		<li><a class="J_menuItem" href="32.html">喜剧片</a></li>
+				                                    		<li><a class="J_menuItem" href="33.html">恐怖片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">电视剧<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="34.html">战争片</a></li>
+				                                    		<li><a class="J_menuItem" href="35.html">刑侦片</a></li>
+				                                    		<li><a class="J_menuItem" href="36.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="37.html">历史片</a></li>
+				                                    		<li><a class="J_menuItem" href="38.html">外国片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="1.html">少儿<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="39.html">动画片</a></li>
+				                                    		<li><a class="J_menuItem" href="40.html">动画电视剧</a></li>
+				                                    		<li><a class="J_menuItem" href="41.html">少儿文艺</a></li>
+				                                    		<li><a class="J_menuItem" href="42.html">少儿教育</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">文艺<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="43.html">歌曲</a></li>
+				                                    		<li><a class="J_menuItem" href="44.html">小品</a></li>
+				                                    		<li><a class="J_menuItem" href="45.html">晚会</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">新闻<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="46.html">中央新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="47.html">新疆新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="48.html">乌鲁木齐新闻</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li><a class="J_menuItem" href="1.html">民语检索</a></li>
+	                                	</ul>
+		                            </li>
+		                            <li>
+		                            	<a  href="#">内容汇聚<span class="fa arrow"></span></a>
+                                    	<ul class="nav nav-fourth-level">
+                                    		<li>
+                                    			<a href="#">云电影<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="49.html">电影详情</a></li>
+		                                    		<li><a class="J_menuItem" href="50.html">电影检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云电视剧<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="51.html">电视剧详情</a></li>
+		                                    		<li><a class="J_menuItem" href="52.html">电视剧检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云综艺<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="53.html">综艺详情</a></li>
+		                                    		<li><a class="J_menuItem" href="54.html">综艺检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云动漫<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="55.html">动漫详情</a></li>
+		                                    		<li><a class="J_menuItem" href="56.html">动漫检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云纪录片<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="57.html">记录详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云娱乐<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="58.html">娱乐详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云专题<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="59.html">专题详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云体育<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="60.html">体育详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云音乐<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="61.html">音乐详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    	</ul>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="62.html">内容搜索</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="63.html">隐私权保护</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="64.html">问题反馈</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="65.html">客户端下载</a>
+		                            </li>
+		                            <li>
+		                            	<a href="#">大型专题</a>
+		                            	<ul class="nav nav-fourth-level">
+		                            		<li>
+		                            			<a href="#">蒙面歌王专题<span class="fa arrow"></span></a>
+		                            			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="66.html">往期视频</a></li>
+		                                    		<li><a class="J_menuItem" href="67.html">精彩片段</a></li>
+		                                    	</ul>
+		                            		</li>
+		                            		<li>
+		                            			<a href="#">抗战老兵专题<span class="fa arrow"></span></a>
+		                            			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="68.html">精彩视频</a></li>
+		                                    		<li><a class="J_menuItem" href="69.html">敬礼老兵</a></li>
+		                                    	</ul>
+		                            		</li>
+		                            	</ul>
+		                            </li>
+		                        </ul>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="70.html">天山云APP-点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="71.html">APP维语——点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="72.html">APP哈语——点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="73.html">天山云APP-直播</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                            <a class="J_menuItem" href="index_v3.html">
+                        	<i class="fa fa-columns"></i> 
+                        	<span class="nav-label">区块</span>
+                        	<span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">
+                                	<span class="nav-label">天山云TV<span class="fa arrow"></span></span>
+                                </a>
+		                        <ul class="nav nav-second-level">
+		                            <li>
+		                            	<a  href="#">自有资源<span class="fa arrow"></span></a>
+		                            	<ul class="nav nav-third-level">
+		                                    <li>
+		                                    	<a href="#">院线<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="TianshanTV_EuropeFilm.html">欧美院线</a></li>
+		                                    		<li><a class="J_menuItem" href="TianshanTV_ChilaFilm.html">华语院线</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a  href="#">视频新闻<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="Videonews_CentralNews.html">中央新闻联播</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_XinjiangNews.html">新疆新闻联播</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_UrumqiNews.html">乌鲁木齐新闻</a></li>
+		                                    		<li><a class="J_menuItem" href="Videonews_SocialNews.html">大事小事</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li><a class="J_menuItem" href="7.html">直播</a></li>
+		                                    <li><a class="J_menuItem" href="8.html">云直播</a></li>
+		                                    <li><a class="J_menuItem" href="9.html">文字新闻</a></li>
+		                                    <li>
+		                                    	<a href="1.html">特色专题<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li><a class="J_menuItem" href="10.html">剧集</a></li>
+		                                    		<li><a class="J_menuItem" href="11.html">电影</a></li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a href="#">哈语<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li>
+		                                    			<a  href="#">电影</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="12.html">动作片</a></li>
+				                                    		<li><a class="J_menuItem" href="13.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="14.html">科幻片</a></li>
+				                                    		<li><a class="J_menuItem" href="15.html">喜剧片</a></li>
+				                                    		<li><a class="J_menuItem" href="16.html">战争片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">电视剧</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="17.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="18.html">情感片</a></li>
+				                                    		<li><a class="J_menuItem" href="19.html">刑侦片</a></li>
+				                                    		<li><a class="J_menuItem" href="20.html">军旅片</a></li>
+				                                    		<li><a class="J_menuItem" href="21.html">历史片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">文艺</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="22.html">阿肯弹唱</a></li>
+				                                    		<li><a class="J_menuItem" href="23.html">晚会</a></li>
+				                                    		<li><a class="J_menuItem" href="24.html">民歌</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">少儿</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="25.html">动画片</a></li>
+				                                    		<li><a class="J_menuItem" href="26.html">动画连续剧</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">新闻</a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="27.html">新疆新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="28.html">国际新闻</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li>
+		                                    	<a href="#">维语<span class="fa arrow"></span></a>
+		                                    	<ul class="nav nav-fourth-level">
+		                                    		<li>
+		                                    			<a href="#">电影<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="29.html">动作片</a></li>
+				                                    		<li><a class="J_menuItem" href="30.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="31.html">科幻片</a></li>
+				                                    		<li><a class="J_menuItem" href="32.html">喜剧片</a></li>
+				                                    		<li><a class="J_menuItem" href="33.html">恐怖片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">电视剧<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="34.html">战争片</a></li>
+				                                    		<li><a class="J_menuItem" href="35.html">刑侦片</a></li>
+				                                    		<li><a class="J_menuItem" href="36.html">生活片</a></li>
+				                                    		<li><a class="J_menuItem" href="37.html">历史片</a></li>
+				                                    		<li><a class="J_menuItem" href="38.html">外国片</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="1.html">少儿<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="39.html">动画片</a></li>
+				                                    		<li><a class="J_menuItem" href="40.html">动画电视剧</a></li>
+				                                    		<li><a class="J_menuItem" href="41.html">少儿文艺</a></li>
+				                                    		<li><a class="J_menuItem" href="42.html">少儿教育</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">文艺<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="43.html">歌曲</a></li>
+				                                    		<li><a class="J_menuItem" href="44.html">小品</a></li>
+				                                    		<li><a class="J_menuItem" href="45.html">晚会</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    		<li>
+		                                    			<a href="#">新闻<span class="fa arrow"></span></a>
+		                                    			<ul class="nav nav-fifth-level">
+				                                    		<li><a class="J_menuItem" href="46.html">中央新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="47.html">新疆新闻</a></li>
+				                                    		<li><a class="J_menuItem" href="48.html">乌鲁木齐新闻</a></li>
+				                                    	</ul>
+		                                    		</li>
+		                                    	</ul>
+		                                    </li>
+		                                    <li><a class="J_menuItem" href="1.html">民语检索</a></li>
+	                                	</ul>
+		                            </li>
+		                            <li>
+		                            	<a  href="#">内容汇聚<span class="fa arrow"></span></a>
+                                    	<ul class="nav nav-fourth-level">
+                                    		<li>
+                                    			<a href="#">云电影<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="49.html">电影详情</a></li>
+		                                    		<li><a class="J_menuItem" href="50.html">电影检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云电视剧<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="51.html">电视剧详情</a></li>
+		                                    		<li><a class="J_menuItem" href="52.html">电视剧检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云综艺<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="53.html">综艺详情</a></li>
+		                                    		<li><a class="J_menuItem" href="54.html">综艺检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云动漫<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="55.html">动漫详情</a></li>
+		                                    		<li><a class="J_menuItem" href="56.html">动漫检索</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云纪录片<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="57.html">记录详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云娱乐<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="58.html">娱乐详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云专题<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="59.html">专题详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云体育<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="60.html">体育详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    		<li>
+                                    			<a href="#">云音乐<span class="fa arrow"></span></a>
+                                    			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="61.html">音乐详情</a></li>
+		                                    	</ul>
+                                    		</li>
+                                    	</ul>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="62.html">内容搜索</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="63.html">隐私权保护</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="64.html">问题反馈</a>
+		                            </li>
+		                            <li>
+		                            	<a class="J_menuItem" href="65.html">客户端下载</a>
+		                            </li>
+		                            <li>
+		                            	<a href="#">大型专题</a>
+		                            	<ul class="nav nav-fourth-level">
+		                            		<li>
+		                            			<a href="#">蒙面歌王专题<span class="fa arrow"></span></a>
+		                            			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="66.html">往期视频</a></li>
+		                                    		<li><a class="J_menuItem" href="67.html">精彩片段</a></li>
+		                                    	</ul>
+		                            		</li>
+		                            		<li>
+		                            			<a href="#">抗战老兵专题<span class="fa arrow"></span></a>
+		                            			<ul class="nav nav-fifth-level">
+		                                    		<li><a class="J_menuItem" href="68.html">精彩视频</a></li>
+		                                    		<li><a class="J_menuItem" href="69.html">敬礼老兵</a></li>
+		                                    	</ul>
+		                            		</li>
+		                            	</ul>
+		                            </li>
+		                        </ul>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="70.html">天山云APP-点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="71.html">APP维语——点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="72.html">APP哈语——点播</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="73.html">天山云APP-直播</a>
+                            </li>
+                        </ul>
+
+                    </li>
+					<li>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">用户</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="user_manage.html">管理用户</a>
+                            </li>
+                            <li><a class="J_menuItem" href="user_ check.html">审核用户</a>
+                            </li>
+                            <li><a class="J_menuItem" href="user_groupsetting.html">用户组设置</a>
+                            </li>
+                            <li><a class="J_menuItem" href="user_register.html">登录日志</a>
+                            </li>
+                            <li><a class="J_menuItem" href="user_setting.html">相关设置</a>
+                            </li>
+                            <li><a class="J_menuItem" href="user_advise.html">意见反馈</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="template_manage.html"><i class="fa fa-envelope"></i> <span class="nav-label">模板</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="template_new.html">新建模板</a>
+                            </li>
+                            <li><a class="J_menuItem" href="template_manage.html">管理模板</a>
+                            </li>
+                            <li><a class="J_menuItem" href="template_replace.html">更换模板</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">设置</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                            	<a href="#">全局设置<span class="fa arrow"></span></a>
+                            	<ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="globalConfig_siteInfo.html">站点信息</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="globalConfig_securitySetting.html">安全设置</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="globalConfig_optimize.html">性能优化</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="globalConfig_enhancementSetting.html">附件设置</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="globalConfig_emailSetting.html">邮件设置</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="globalConfig_seoSetting.html">SEO设置</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<a href="#">权限设置<span class="fa arrow"></span></a>
+                            	<ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="powerSettings_admin.html">管理员</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="powerSettings_role.html">角色</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="powerSettings_department.html">部门</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="powerSettings_permission.html">权限</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="1.html">栏目设置</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_distribution.html">发布点设置</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_contentModel.html">内容模型</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_workflow.html">工作流</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_dataManage.html">数据源管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_menu.html">菜单管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_wordFilter.html">词语过滤</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_keyLink.html">关键词链接</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_sourceManage.html">来源管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_TagsManage.html">Tags管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_siteMap.html">网站地图</a>
+                            </li>
+                            <li><a class="J_menuItem" href="setting_forwarding.html">转发设置</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">专辑</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="album_manage.html">专辑管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">媒资管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="media_library.html">媒资库</a>
+                            </li>
+                            <li><a class="J_menuItem" href="media_manage.html">栏目管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="1.html"><i class="fa fa-picture-o"></i> <span class="nav-label">直播</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="live_channelManage.html">频道管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="live_EPGManage.html">EPG管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-magic"></i> <span class="nav-label">工具</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                            	<a href="#">数据库<span class="fa arrow"></span></a>
+                            	<ul class="nav nav-third-level">
+                                    <li>
+                                        <a class="J_menuItem" href="tool_dataOptimize.html">数据修复优化</a>
+                                    </li>
+                                    <li>
+                                        <a class="J_menuItem" href="tool_dataBackup.html">数据备份</a>
+                                    </li>
+                                    <li>
+                                        <a class="J_menuItem" href="tool_dataRecovery.html">数据恢复</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_scheduledTask.html">计划任务</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_attachmentManage.html">附件管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_dataImport.html">数据导入</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_updateCache.html">更新缓存</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_IPbanned.html">IP禁止</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tool_operationLog.html">操作日志</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">统计</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="statistics.html">统计</a>
+                            </li>
+                            <li><a class="J_menuItem" href="statistics_editorInspect.html">编辑考核</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        	
+        	<!-- 右侧头部开始-->
+            <div class="row border-bottom">
+                <nav class="navbar" style="margin-bottom: 0">
+                	<!-- 右侧头部——导航条左侧开始-->
+                    <div class="navbar-header">
+                    	<!--toggle button start-->
+                    	<a class="navbar-minimalize toggle-btn" href="#">
+                    		<i class="fa fa-bars"></i> 
+                    	</a>
+                    	<!--toggle button end-->
+                    	<!--search start-->
+                    	<form  role="search"  class="searchform hidden-xs hidden-sm"  method="post"  action="search_results.html">
+                            <input type="text" id="top-search" placeholder="请输入您需要查找的内容 …"   class="form-control"  name="top-search"/>
+                        </form>
+			            <!--search end-->
+                    </div><!-- 右侧头部——导航条左侧结束-->
+                    <!-- 右侧头部——导航条右侧开始-->
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="count-info tooltips" data-placement="bottom" data-original-title="更新首页" data-toggle="tooltip" id="loading-example-btn">
+                            	<i class="fa fa-refresh"></i>
+							</a>
+                        </li>
+                        <li data-toggle="modal" data-target="#mymodal-plus">
+                            <a class="dropdown-toggle count-info tooltips" data-toggle="dropdown tooltip" href="#" data-placement="bottom" data-original-title="添加常用操作">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </li>
+                        <li data-toggle="modal" data-target="#mymodal-edit">
+                            <a class="dropdown-toggle count-info tooltips" data-toggle="dropdown tooltip" href="#" data-placement="bottom" data-original-title="编辑便笺">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <img src="http://admin.nmop.cn/upload/avatar/1/user-avatar.png" alt=""  style="width: 26px; margin-right: 5px; vertical-align: middle;"/>
+                            Admin
+                            <span class="caret"></span>
+	                        </a>
+	                        <ul class="dropdown-menu dropdown-menu-usermenu">
+	                            <li><a href="admin_profile.html" class="J_menuItem"><i class="fa fa-user"></i>&nbsp;&nbsp;个人资料</a></li>
+	                            <li><a href="admin_changePassword.html" class="J_menuItem"><i class="fa fa-cog"></i>&nbsp;&nbsp; 修改密码</a></li>
+	                            <li><a href="login.html"><i class="fa fa-sign-out"></i>&nbsp;&nbsp; 退出</a></li>
+	                        </ul>
+                        </li>
+                    </ul><!-- 右侧头部——导航条右侧结束-->
+                </nav>
+            </div>
+            <!-- 右侧头部结束-->
+            
+            <!-- 选项卡导航开始-->
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-angle-double-left"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="myindex.html">首页</a>
+                        <a href="javascript:;" class="J_menuTab" data-id="new_blank.html"><span class="fa fa-plus"></span></a>
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight"><i class="fa fa-angle-double-right"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
+
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 选项卡导航结束-->
+            
+            <!-- iFrame页面开始-->
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="myindex.html" frameborder="0" data-id="myindex.html" seamless></iframe>
+            </div>
+            <!-- iFrame页面结束-->
+            
+            <!-- 底部开始-->
+            <div class="footer">
+                <div class="pull-right">&copy; 2016 <a href="#" target="_blank">lulian</a>
+                </div>
+            </div>
+            <!-- 底部结束-->
+            
+            <!--模态弹出框(添加常用操作)开始-->
+            <div class="modal" id="mymodal-plus" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title">添加常用操作</h4>
+						</div>
+						<div class="modal-body">
+							<form role="form">
+							  <div class="form-group">
+							    <label for="title">标题：
+							    	<input type="text" class="form-control" id="title" placeholder="请输入您的邮箱地址"/>
+							    </label>
+							  </div>
+							  <div class="form-group">
+							    <label for="address">网址：
+							    	<input type="url" class="form-control" id="address" placeholder="请输入您的邮箱地址"/>
+							    </label>
+							  </div>
+							  
+							</form>	
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary save" data-dismiss="modal">保存</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--模态弹出框(添加常用操作)结束-->
+			
+			<!--模态弹出框(编辑便签)开始-->
+            <div class="modal" id="mymodal-edit" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title">编辑便签</h4>
+							<time style="font-size: 12px;">最后更新：2016-02-24 17:31:16</time>
+						</div>
+						<div class="modal-body">
+							<textarea cols="70" rows="10" placeholder="随便写点什么吧"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary save" data-dismiss="modal">保存</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--模态弹出框(编辑便签)结束-->
+			
+			<!--模态弹出框(保存信息)开始-->
+            <div class="modal" id="mymodal-save" tabindex="-1" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4>保存信息成功</h4>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--模态弹出框(保存信息)结束-->
+        </div>
+        <!--右侧部分结束-->
+    </div>
+    
+    
+</body>
+
+</html>

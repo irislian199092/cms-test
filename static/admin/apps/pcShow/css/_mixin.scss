@@ -1,0 +1,164 @@
+@mixin scrollbar($width,$scroll,$thumb,$track){
+    ::-webkit-scrollbar
+    {
+        width: $width;
+        background-color: $scroll;
+    }
+    ::-webkit-scrollbar-thumb
+    {
+        background-color: $thumb;
+    }
+    ::-webkit-scrollbar-track
+    {
+        background-color: $track;
+    }
+    ::-moz-scrollbar
+    {
+        width: $width;
+        background-color: $scroll;
+    }
+    ::-moz-scrollbar-thumb
+    {
+        background-color: $thumb;
+    }
+    ::-moz-scrollbar-track
+    {
+        background-color: $track;
+    }
+    ::-ms-scrollbar
+    {
+        width: $width;
+        background-color: $scroll;
+    }
+    ::-ms-scrollbar-thumb
+    {
+        background-color: $thumb;
+    }
+    ::-ms-scrollbar-track
+    {
+        background-color: $track;
+    }
+    ::-o-scrollbar
+    {
+        width: $width;
+        background-color: $scroll;
+    }
+    ::-o-scrollbar-thumb
+    {
+        background-color: $thumb;
+    }
+    ::-o-scrollbar-track
+    {
+        background-color: $track;
+    }
+     ::scrollbar
+    {
+        width: $width;
+        background-color: $scroll;
+    }
+    ::scrollbar-thumb
+    {
+        background-color: $thumb;
+    }
+    ::scrollbar-track
+    {
+        background-color: $track;
+    }
+}
+
+
+
+
+@mixin transition($transition){
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+@mixin transform-origin($origin){
+	-webkit-transform-origin:$origin;
+	-moz-transform-origin:$origin;
+	-ms-transform-origin:$origin;
+	-o-transform-origin:$origin;
+	transform-origin:$origin;
+}
+@mixin scale($scale){
+	-webkit-transform:scale($scale);
+	-moz-transform:scale($scale);
+	-ms-transform:scale($scale);
+	-o-transform:scale($scale);
+	transform:scale($scale);
+}
+@mixin flex(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	display: box; 
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -o-flex;
+  	display: -ms-flexbox;
+  	display: flex;
+}
+@mixin opacity($opacity) {
+	opacity:$opacity;
+	filter:alpha(opacity=$opacity * 100)
+}
+@mixin border-radius($borderRadius) {
+    -moz-border-radius: $borderRadius + px; /* Firefox */
+    -webkit-border-radius: $borderRadius + px; /* Safari 和 Chrome */
+    border-radius: $borderRadius + px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+
+@mixin formIcon(){
+    .form-group .username_icon
+    {
+        background: url(../img/login_username.png) left center no-repeat;
+    }
+    .password_icon
+    {
+        background: url(../img/login_password.png) left center no-repeat;
+    }
+    .form-group .appPerson_btn
+    {
+        font: 14px/45px '微软雅黑';
+        width: 100%;
+        height: 45px;
+        margin: 15px  0;
+        color: #fff;
+        border: none;
+        background: #379bec;
+    }
+}
+
+@mixin dot() {
+    height: 60px;
+    .toggle .compact
+    {
+        display: none;
+    }
+    &.toggle .opened,&.opened .toggle .compact
+    {
+        display: inline;
+    }
+}
+
+@mixin appBtn() {
+    font: 14px/45px '微软雅黑';
+    width: 100%;
+    height: 45px;
+    margin: 15px 0;
+    color: #fff;
+    border: none;
+    background: #379bec;
+}
+
+@mixin linearGradient($dir,$start,$end){
+    background: -moz-linear-gradient($dir,$start, $end); /* FF3.6+ */
+    background: -webkit-linear-gradient($dir,$start,$end); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient($dir,$start,$end); /* Opera 11.10+ */
+    background: -ms-linear-gradient($dir,$start,$end); /* IE10+ */
+    background: linear-gradient($dir,$start,$end); /* W3C */
+}

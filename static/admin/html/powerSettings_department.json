@@ -1,0 +1,59 @@
+{
+	"total": "2",
+    "data":[
+		{
+			"departmentid": 1,
+			"parentid":null,
+			"parentids":null,
+			"name": "编辑部",
+			"sort": 0,
+			"leaderid": 1,
+			"posts": 0,
+			"comments": 0,
+			"pv": 2239,
+			"numpeople": 2,
+			"rolename":"超级管理员",
+			"parent": "",
+			"childids": [{
+				"departmentid": "1-1",
+				"parentid":1,
+				"name": "超级管理员",
+				"roleid": 1,
+				"numpeople": 2,
+				"rolename":""
+			}]
+		},
+		{
+			"departmentid": 2,
+			"parentid":null,
+			"parentids":null,
+			"name": "技术部",
+			"sort": 0,
+			"leaderid": 2,
+			"posts": 0,
+			"comments": 0,
+			"pv": 31402,
+			"numpeople": 6,
+			"rolename":"总编辑",
+			"parent": "",
+			"childids":[
+			{
+				"departmentid": "2-1",
+				"parentid":2,
+				"name": "总编辑",
+				"roleid": 2,
+				"numpeople": 5,
+				"rolename":""
+			},
+			{		
+				"departmentid": "2-2",
+				"parentid":2,
+				"name": "实习编辑",
+				"roleid": 3,
+				"numpeople": 1,
+				"rolename":""
+			}]
+		}
+     ]
+}
+

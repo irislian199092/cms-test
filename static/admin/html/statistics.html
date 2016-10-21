@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>统计</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+	    	
+		<!-- 公用CSS -->
+	    <link rel="shortcut icon" href="favicon.ico">
+	    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+	    	
+		<!-- 公用 JS -->
+	    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	    	
+  		<!-- 外部插件——图表插件JS-->
+    	<script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/flot/jquery.flot.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/flot/jquery.flot.tooltip.min.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/flot/jquery.flot.resize.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/flot/jquery.flot.pie.js"></script>
+	    <script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/flot-demo.js"></script>
+	    
+	    <!-- 自定义——goHome弹球JS -->
+		<script src="http://admin.nmop.cn/static/admin/apps/statisticals/js/goHome.js"></script>
+	    	
+</head>
+
+<body class="gray-bg">
+	<div class="page-heading" style="padding: 20px;">
+		<h3>统计</h3>
+		<ul class="breadcrumb">
+		  <li><a href="statistics.html">统计</a></li>
+		  <li class="active">统计</li>
+		</ul>
+	</div>
+    <div class="wrapper wrapper-content">
+    	
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content mailbox-content">
+                        <div class="file-manager">
+                            <a class="btn btn-block btn-primary compose-mail" href="mail_compose.html">栏目列表</a>
+                            <div class="space-25"></div>
+                            <h4>全部</h4>
+                            <ul class="folder-list m-b-md" style="padding: 0">
+                                <li>
+                                    <a href="#"> <i class="fa arrow"></i> 天山云TV9</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa arrow"></i> 天山云APP-点播</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa arrow"></i> APP维语-点播</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa arrow"></i> APP哈语-点播</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa arrow"></i>天山云APP-点播</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10 animated fadeInRight">
+            	<div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                    	<div class="row">
+		                	<div class="col-md-12">
+		                		<div class="btn-group btn-group-justified">
+		                			<div class="btn-group">
+		                				<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">年份<span class="caret"></span></a>
+			                			<ul class="dropdown-menu" style="width: 100%;">
+			                				<li><a href="#" class="text-center">全部</a></li>
+			                				<li class="divider"></li>
+			        						<li><a href="#" class="text-center">2016</a></li>
+			        						<li><a href="#" class="text-center">2015</a></li>
+			        						<li><a href="#" class="text-center">2014</a></li>
+			        						<li><a href="#" class="text-center">2013</a></li>
+			        						<li><a href="#" class="text-center">2012</a></li>
+			        						<li><a href="#" class="text-center">2011</a></li>
+			        						<li><a href="#" class="text-center">2010</a></li>
+			        						<li><a href="#" class="text-center">2009</a></li>
+			        						<li><a href="#" class="text-center">2008</a></li>
+			        						<li><a href="#" class="text-center">2007</a></li>
+			                			</ul>
+		                			</div>
+		                			<div class="btn-group">
+		                				<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">月份<span class="caret"></span></a>
+			                			<ul class="dropdown-menu" style="width: 100%;">
+			                				<li><a href="#" class="text-center">全部</a></li>
+			                				<li class="divider"></li>
+			        						<li><a href="#" class="text-center">1月</a></li>
+			        						<li><a href="#" class="text-center">2月</a></li>
+			        						<li><a href="#" class="text-center">3月</a></li>
+			        						<li><a href="#" class="text-center">4月</a></li>
+			        						<li><a href="#" class="text-center">5月</a></li>
+			        						<li><a href="#" class="text-center">6月</a></li>
+			        						<li><a href="#" class="text-center">7月</a></li>
+			        						<li><a href="#" class="text-center">8月</a></li>
+			        						<li><a href="#" class="text-center">9月</a></li>
+			        						<li><a href="#" class="text-center">10月</a></li>
+			        						<li><a href="#" class="text-center">11月</a></li>
+			        						<li><a href="#" class="text-center">12月</a></li>
+			                			</ul>
+		                			</div>
+		                			<div class="btn-group">
+		                				<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">模型<span class="caret"></span></a>
+			                			<ul class="dropdown-menu" style="width: 100%;">
+							   	  	 		<li class="active"><a href="#" ><span class="fa fa-file"></span> 文章</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-image"></span> 组图</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-link"></span> 链接</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-film"></span> 视频</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-microphone"></span> 访谈</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-trophy"></span> 活动</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-bar-chart"></span> 投票</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-line-chart"></span> 调查</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-indent"></span> 专题</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-video-camera"></span> 音频</a></li>
+							   	  	 		<li><a href="#"><span class="fa fa-gamepad"></span> 游戏</a></li>
+							   	  	 	</ul>
+		                			</div>
+		                		</div>
+		                	</div>
+		                </div>
+                    
+                    	        <div class="row">
+						            <div class="col-sm-6">
+						                <div class="ibox float-e-margins">
+						                    <div class="ibox-title">
+						                        <h5>发稿量</h5>
+						                        <div class="ibox-tools">
+						                            <a class="collapse-link">
+						                                <i class="fa fa-chevron-up"></i>
+						                            </a>
+						                            <a class="close-link">
+						                                <i class="fa fa-times"></i>
+						                            </a>
+						                        </div>
+						                    </div>
+						                    <div class="ibox-content">
+						                        <div class="flot-chart">
+						                            <div class="flot-chart-content" id="flot-bar-chart"></div>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div>
+						            
+						            <div class="col-sm-6">
+						                <div class="ibox float-e-margins">
+						                    <div class="ibox-title">
+						                        <h5>动态图</h5>
+						                        <div class="ibox-tools">
+						                            <a class="collapse-link">
+						                                <i class="fa fa-chevron-up"></i>
+						                            </a>
+						                            <a class="close-link">
+						                                <i class="fa fa-times"></i>
+						                            </a>
+						                        </div>
+						                    </div>
+						                    <div class="ibox-content">
+						
+						                        <div class="flot-chart">
+						                            <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div>
+						            
+						        </div>
+						
+						        <div class="row">
+						            <div class="col-sm-12">
+						                <div class="ibox float-e-margins">
+						                    <div class="ibox-title">
+						                        <h5>月访问量</h5>
+						                        <div class="ibox-tools">
+						                            <a class="collapse-link">
+						                                <i class="fa fa-chevron-up"></i>
+						                            </a>
+						                            <a class="close-link">
+						                                <i class="fa fa-times"></i>
+						                            </a>
+						                        </div>
+						                    </div>
+						                    <div class="ibox-content">
+						                        <div class="flot-chart">
+						                            <div class="flot-chart-content" id="flot-line-chart-multi"></div>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div>
+						        </div>
+
+                    	
+                    </div>
+                </div>
+        	</div>
+        
+    	</div>
+    </div>
+</body>
+
+</html>

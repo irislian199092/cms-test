@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>PC展示</title>
+<meta name="keywords" content="#">
+<meta name="description" content="#">
+	
+<!-- 公用CSS -->
+<link href="http://admin.nmop.site/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://admin.nmop.site/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://admin.nmop.site/static/admin/apps/pcShow/css/pcStyle.css" rel="stylesheet">
+
+<!-- 公用 JS -->
+<script src="http://admin.nmop.site/static/admin/jquery/jquery-1.11.3.js"></script>
+<script src="http://admin.nmop.site/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- 外部插件——JQui插件JS-->
+<script src="http://admin.nmop.site/static/admin/apps/pcShow/js/libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="http://admin.nmop.site/static/admin/apps/pcShow/js/libs/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- 自定义——组件JS-->
+<script src="http://admin.nmop.site/static/admin/apps/pcShow/js/component/pc.js"></script>
+
+</head>
+<body style="min-height: 660px; cursor: auto;" class="gray-bg">
+	<div class="navbar">
+  		<div class="navbar-inner">
+    		<div class="container-fluid">
+    			<div class="page-heading" style="padding:10px 0;">
+					<ul class="breadcrumb">
+					  <li><a href="index.html">APP展示</a></li>
+					  <li class="active">APP展示</li>
+					</ul>
+				</div>
+      		</div>
+    	</div>
+  	</div>
+    <div class="container-fluid" style="margin-top: -10px;">
+    	<div class="row-fluid">
+    		<div id="appSidebar">
+				<ul class="appNav"></ul>
+        	</div>
+        	<div id="appContent">
+            	<div class="row" style="margin-left: 0px;">
+            		<div class="col-md-12  demo">
+	            		 <!-- <div class="view">
+	            		 	<div class="appWrap appWrap_box">
+	            		 		<div class="draggable appSection_special section_special1" data-toggle="context" data-eindex="0">
+	            		 			<div class="appSection_special_wrap clearfix">
+	            		 				<div class="appSection_special_l fl">
+	            		 					<a href=""> 
+	            		 						<img src="http://www.tsytv.com.site/upload/2015/1204/1449226676208.jpg" alt="">
+	            		 					</a>
+	            		 				</div>
+	            		 				<div class="appSection_special_r fr">
+	            		 					<a href="">
+	            		 						<img src="http://www.tsytv.com.site/upload/2015/0730/1438224262389.jpg" alt="">
+	            		 					</a>
+	            		 				</div>	
+	            		 			</div>
+	            		 		</div>
+	            		 	</div> -->
+	            		</div> 
+           			</div>
+           			<div class="row" style="margin-top:15px;">
+           				<div class="col-md-12" style="text-align:right">
+           					<button class="btn btn-primary" id="js_save">保存</button>
+           					<button class="btn btn-default" id="js_edit" disabled="disabled">编辑</button>
+           				</div>
+           			</div>
+            	</div>
+        	</div>
+        	<div id="context-menu">
+		          <ul class="dropdown-menu" role="menu">
+		              <li><a tabindex="-1">删除</a></li>
+		          </ul>
+		        </div>
+			</div>
+		</div>
+	</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <!-- 这里放入需要编辑的内容开始 -->
+
+        <!-- 这里放入需要编辑的内容结束 -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//初始化页面
+	var init_arr=[{
+		type:[],
+		name:'容器',
+		typeClass:['box']
+	},{
+		type:['header'],
+		name:'首页头部导航条'
+	},{
+		type:['slide'],
+		name:'首页轮播图'
+	},{
+		type:['today_hot'],
+		name:'今日热门'
+	},{
+		type:['section_variety'],
+		name:'内容区块——综艺'
+	},{
+		type:['section_special'],
+		name:'内容区块——专题'
+	},{
+		type:['footer_nav'],
+		name:'底部导航'
+	},{
+		type:['footer'],
+		name:'底部'
+	}] 
+	console.log(init_arr) ;              
+	$.each(init_arr,function(i,n){
+		var init_li=$('<li>');
+		var init_a=$('<a  href="#"><i class="fa fa-link"></i><span class="nav-label">组件——'+n.name+'</span><span class="fa arrow"></span></a>');
+		init_li.append(init_a);
+		var init_ul=$('<ul class="appNav_body" data-type="appNav_'+n.type[0]+'Type">');
+		if(n.name==="容器"){
+			$.each(n.typeClass,function(index,item){
+				var init_ul_li=$('<li class="appNav_body_item appNav_comp_'+item+'"><span class="add label"><i class="fa fa-plus"></i>添加</span><div class="preview">'+item+'</div></li>');
+				init_ul.append(init_ul_li);
+			})
+		}else{
+			$.each(n.type,function(index,item){
+				var init_ul_li=$('<li class="appNav_comp_item appNav_comp_'+item+'"><span class="add label"><i class="fa fa-plus"></i>添加</span><div class="preview">'+n.name+(index+1)+'</div></li>');
+				init_ul.append(init_ul_li);
+			});
+		}
+		init_li.append(init_ul);
+		$('#appSidebar .appNav').append(init_li);				
+	})
+	
+	/*点击保存按钮*/
+	$('#js_save').on('click',function(){
+		if($('.appWrap').find('.whiteMask').length){
+			alert("还有模块未保存");
+		}else{
+			$('.appWrap').children().each(function(i){
+				$(this).attr('index')||$(this).attr('index',i);
+				$(this).addClass('ui-state-disabled');
+			})
+			$('#js_edit').prop('disabled',false);
+			$('.appWrap').sortable({
+				cancel: ".ui-state-disabled"
+			});
+		}
+
+	})
+	/*点击编辑按钮*/
+	$('#js_edit').on('click',function(){
+		$('.appWrap').children().each(function(i){
+			$(this).removeClass('ui-state-disabled');
+			var str=$('.appWrap').children().eq(i).attr('id').substring(3);
+			var name=str.substring(0,1).toLowerCase()+str.substring(1);
+			var whiteMask=$('<div class="whiteMask">');
+			var dragBtn=$('<button class="dragBtn" data-toggle="modal" data-target="#myModal" data-type="'+name+'">编辑</button>');
+			var removeBtn=$('<button class="removeBtn">删除</button>');		
+			var saveBtn=$('<button class="saveBtn">保存</button>');
+			var dom=$('.appWrap').children().eq(i).children();
+			whiteMask.insertBefore(dom);
+			dragBtn.insertBefore(dom);
+			removeBtn.insertBefore(dom);
+			saveBtn.insertBefore(dom);
+		})
+		$('.dragBtn').on('click',function(){
+			$('#myModalLabel').html($(this).data('type'));
+		});
+	    $('.removeBtn').on('click',function(){
+			$(this).parent().remove();
+		});
+		$('.saveBtn').on('click',function(){
+			$(this).siblings('.whiteMask,.dragBtn,.removeBtn').remove();
+			$(this).remove();
+		})
+	})
+
+})
+</script>
+<script type="text/javascript">
+/*添加每个组件的JS*/
+var res = ['Header','Slide','Today_hot','Section_variety','Section_special','Footer_nav','Footer'];
+var html = [];
+for(s in res){
+    html.push('<script type="text/javascript" src="../apps/pcShow/js/component/pcComponent'+res[s]+'.js"><\/script>');
+};
+html.push('');
+document.write( html.join(''));
+</script>
+<script src="http://admin.nmop.site/static/admin/apps/pcShow/js/pcMain.js"></script>
+</body>
+</html>
+
+
+

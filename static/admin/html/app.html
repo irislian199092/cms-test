@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>APP展示</title>
+<meta name="keywords" content="#">
+<meta name="description" content="#">
+	
+<!-- 公用CSS -->
+<link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://admin.nmop.cn/static/admin/apps/appShow/css/appStyle.css" rel="stylesheet">
+
+<!-- 外部插件——表单选择框插件CSS -->
+<!-- <link href="http://admin.nmop.cn/static/admin/apps/appShow/js/libs/iCheck/custom.css" rel="stylesheet"> -->
+
+<!-- 公用 JS -->
+<script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- 外部插件——JQui插件JS-->
+<script src="http://admin.nmop.cn/static/admin/apps/appShow/js/libs/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- 外部插件——右击菜单插件JS-->
+<script src="http://admin.nmop.cn/static/admin/apps/appShow/js/libs/bootstrap-contextmenu.js"></script>
+
+<!-- 外部插件——多行溢出隐藏插件JS-->
+<script src="http://admin.nmop.cn/static/admin/apps/appShow/js/libs/jQuery.dotdotdot-master/jquery.dotdotdot.min.js"></script>
+
+<!-- 自定义——组件JS-->
+<script src="http://admin.nmop.cn/static/admin/apps/appShow/js/component/app.js"></script>
+
+</head>
+<body style="min-height: 660px; cursor: auto;" class="gray-bg">
+	<div class="navbar">
+  		<div class="navbar-inner">
+    		<div class="container-fluid">
+    			<div class="page-heading" style="padding:10px 0;">
+					<ul class="breadcrumb">
+					  <li><a href="index.html">APP展示</a></li>
+					  <li class="active">APP展示</li>
+					</ul>
+				</div>
+      		</div>
+    	</div>
+  	</div>
+    <div class="container-fluid">
+    	<div class="row-fluid">
+    		<div id="appSidebar">
+				<ul class="appNav"></ul>
+        	</div>
+        	<div id="appContent">
+            	<div class="row">
+            		<div class="col-md-6  demo">
+	            		<!-- <div class="view">
+	            			<div class="ui-sortable appWrap appWrap_iphone5">
+	            				<div class="draggable appLivevideo appLivevideo1" data-toggle="context" data-eindex="0">
+	            					<div class="appLivevideo_wrap">
+	            						<div class="appLivevideo_title">
+	            							<i class="fa fa-angle-left"></i>被风吹过的夏天
+	            						</div>
+	            						<video class="appLivevideo_content" autoplay="" controls="">
+	            							<source src="../apps/appShow/img/test.mp4">
+	            						</video>
+	            					</div>
+	            				</div>
+	            			</div>
+	            		</div> -->
+           				<div id="context-menu">
+					          <ul class="dropdown-menu" role="menu">
+					              <li><a tabindex="-1">删除</a></li>
+					          </ul>
+					        </div>
+            			</div>
+            		<div class="col-md-6" style="margin-top: 10px;">
+            			<form role="form" class="form-horizontal m-t" id="boxForm" style="display: none;">
+            				<div class="form-group" id="boxType">
+            					<label class="col-sm-3 control-label">手机容器:</label>
+            					<div class="col-sm-9">
+            						<select class="form-control" name="phoneType">
+            							<option>iphone4</option>
+            							<option>iphone5</option>
+            							<option>iphone6</option>
+            							<option>iphone6plus</option>
+            							<option>Nexus4</option>
+            							<option>Nexus5</option>
+            							<option>Nexus6</option>
+            							<option>Nexus7</option>
+            						</select>
+            					</div>
+            				</div>
+            				<div class="hr-line-dashed"></div>
+            				<div class="form-group">
+            					<div class="col-sm-12 col-sm-offset-3">
+	            					<button class="btn btn-primary" id="save_box">保存内容</button>
+	            					<button class="btn btn-white" id="cancel_box">取消</button>
+	            				</div>
+            				</div>
+            				<div class="hr-line-dashed"></div>
+                        </form>
+            			<form role="form" class="form-horizontal m-t" id="editForm">
+                        </form>
+            		</div>
+            	</div>
+        	</div>
+		</div>
+	</div>
+<script type="text/javascript">
+$(function(){
+	var init_arr=[{
+		type:['phone'],
+		name:'手机容器',
+		typeClass:['iphone4','iphone5','iphone6','iphone6plus','Nexus4','Nexus5','Nexus6','Nexus7']
+	},{
+		type:['logo'],
+		name:'首页logo'
+	},{
+		type:['header','header2'],
+		name:'首页头部导航条'
+	},{
+		type:['footer'],
+		name:'首页底部导航条'
+	},{
+		type:['slide'],
+		name:'首页轮播图'
+	},{
+		type:['section'],
+		name:'首页内容区块'
+	},{
+		type:['livenav'],
+		name:'直播导航条'
+	},{
+		type:['livecontent'],
+		name:'直播内容'
+	},{
+		type:['hotsearch'],
+		name:'热搜'
+	},{
+		type:['hotplay'],
+		name:'今日热播'
+	},{
+		type:['live_header'],
+		name:'点播标题'
+	},{
+		type:['live_nav'],
+		name:'点播导航'
+	},{
+		type:['live_list'],
+		name:'点播内容列表'
+	},{
+		type:['live_video'],
+		name:'点播视频'
+	},{
+		type:['live_play_tv'],
+		name:'点播电视剧详情'
+	},{
+		type:['live_like_tv'],
+		name:'点播电视剧猜你喜欢'
+	},{
+		type:['live_play_movie'],
+		name:'点播电影详情'
+	},{
+		type:['live_like_movie'],
+		name:'点播电影猜你喜欢'
+	},{
+		type:['live_play_variety'],
+		name:'点播综艺节目详情'
+	},{
+		type:['live_subscription'],
+		name:'订阅频道'
+	},{
+		type:['more_add'],
+		name:'更多——添加应用'
+	},{
+		type:['more_setting'],
+		name:'更多——设置'
+	},{
+		type:['more_advise'],
+		name:'更多——意见反馈'
+	},{
+		type:['person_nonlogin_header'],
+		name:'个人中心未登录头部'
+	},{
+		type:['person_login_header'],
+		name:'个人中心登录头部'
+	},{
+		type:['personbody'],
+		name:'个人中心未登录区块'
+	},{
+		type:['person_nonlogin_history'],
+		name:'个人中心未登录观看历史'
+	},{
+		type:['person_login_message'],
+		name:'个人中心消息中心'
+	},{
+		type:['person_login_body_detail'],
+		name:'个人中心登录详细信息'
+	},{
+		type:['person_login_body_history'],
+		name:'个人中心登录观看历史'
+	},{
+		type:['person_register_h'],
+		name:'个人中心注册头部'
+	},{
+		type:['person_register_b'],
+		name:'个人中心注册身体'
+	},{
+		type:['ui_searchbox'],
+		name:'UI搜索框'
+	},{
+		type:['ui_searchbox_lately'],
+		name:'UI搜索框——最近搜索'
+	},{
+		type:['ui_searchbox_hot'],
+		name:'UI搜索框——今日热搜'	
+	}]
+
+	$.each(init_arr,function(i,n){
+		var init_li=$('<li>');
+		var init_a=$('<a  href="#"><i class="fa fa-link"></i><span class="nav-label">组件——'+n.name+'</span><span class="fa arrow"></span></a>');
+		init_li.append(init_a);
+		var init_ul=$('<ul class="appNav_body" data-type="appNav_'+n.type[0]+'Type">');
+		if(n.name==="手机容器"){
+			$.each(n.typeClass,function(index,item){
+				var init_ul_li=$('<li class="appNav_body_item appNav_comp_'+item+' ui-draggable"><span class="add label"><i class="fa fa-plus"></i>添加</span><div class="preview">'+item+'</div></li>');
+				init_ul.append(init_ul_li);
+			})
+		}else{
+			$.each(n.type,function(index,item){
+				var init_ul_li=$('<li class="appNav_comp_item appNav_comp_'+item+' ui-draggable"><span class="add label"><i class="fa fa-plus"></i>添加</span><div class="preview">'+n.name+(index+1)+'</div></li>');
+				init_ul.append(init_ul_li);
+			});
+		}
+		init_li.append(init_ul);
+		$('#appSidebar .appNav').append(init_li);				
+	})
+})
+</script>
+<script type="text/javascript">
+/*添加每个组件的JS*/
+var res = ['Header','Slide','Section','Footer','Logo','Logo2','Videoplay','Hotsearch','Hotplay','Person_nonlogin_header','Person_login_header','Person_login_body_detail','Person_login_message','Person_login_body_history','Personbody','Person_nonLogin_history','Person_register_h','Person_register_b','Livenav','Livecontent','Live_header','Live_nav','Live_list','Live_video','Live_like_tv','Live_play_tv','Live_play_variety','Live_play_movie','Live_like_movie','Live_subscription','Ui_searchbox','Ui_searchbox_lately','Ui_searchbox_hot','More_add','More_setting','More_advise'];
+var html = [];
+for(s in res){
+    html.push('<script type="text/javascript" src="../apps/appShow/js/component/appComponent'+res[s]+'.js"><\/script>');
+};
+html.push('');
+document.write( html.join(''));
+</script>
+<script src="http://admin.nmop.cn/static/admin/apps/appShow/js/appMain.js"></script>
+</body>
+</html>

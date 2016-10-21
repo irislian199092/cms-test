@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>全局设置——邮件设置</title>
+	    <meta name="keywords" content="#">
+	    <meta name="description" content="#">
+         
+		<!-- 公用CSS -->
+	    <link rel="shortcut icon" href="favicon.ico">
+	    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+	    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+	    	
+		<!-- 公用 JS -->
+	    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+    	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+    	<!-- 自定义——goHome弹球JS -->
+		<script src="http://admin.nmop.cn/static/admin/apps/settings/js/goHome.js"></script>
+		
+	</head>
+	<bodyclass="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>设置</h3>
+			<ul class="breadcrumb">
+			  <li><a href="globalConfig_siteInfo.html.html">全局设置</a></li>
+			  <li class="active">邮件设置</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="row wrapper wrapper-content animated fadeInRight">
+	    	<div class="col-sm-12">
+	            <!--ibox1 start-->
+	            <div class="ibox float-e-margins">
+            		<div class="ibox-title">
+                        <h5>邮件设置</h5>
+                    </div>
+            		<div class="ibox-content">
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">发送方式：</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<input type="radio" value="option1" name="optionsRadios">通过 PHP 函数的 sendmail 发送(推荐此方式)</label>
+									</div>
+                                    <div class="input-group">
+										<input type="radio" value="option2" name="optionsRadios">通过 SOCKET 连接 SMTP 服务器发送(支持 ESMTP 验证)</label>
+									</div>
+									<div class="input-group">
+										<input type="radio" value="option3" name="optionsRadios">通过 PHP 函数 SMTP 发送 Email(仅 Windows 主机下有效, 不支持 ESMTP 验证)</label>
+									</div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">SMTP服务器：</label>
+								<div class="col-sm-10">
+                                	<input type="text" placeholder="smtp.cdv.com" class="form-control">
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">SMTP端口：</label>
+                                <div class="col-sm-10">
+                                	<input type="text" placeholder="25" class="form-control" style="display: inline-block; width: 60px;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">SMTP身份验证：</label>
+								<div class="col-sm-10">
+									<label class="radio-inline">
+                                        <input type="radio" value="option1" id="inlineCheckbox1" name="optionsRadios">是</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" value="option2" id="inlineCheckbox2" name="optionsRadios">否</label>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">SMTP用户名：</label>
+								<div class="col-sm-10">
+									<input type="text" placeholder="zhao_zhihua@cdv.com" class="form-control">
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">SMTP密码：</label>
+								<div class="col-sm-10">
+									<input type="password" placeholder="zhao_zhihua@cdv.com" class="form-control">
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">发件人：</label>
+								<div class="col-sm-10">
+                                	<input type="text" placeholder="zhao_zhihua@cdv.com" class="form-control">
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">邮件头分隔符：</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<input type="radio" value="option1" name="optionsRadios">使用 CRLF 作为分隔符(通常为 Windows 主机)</label>
+									</div>
+                                    <div class="input-group">
+										<input type="radio" value="option2" name="optionsRadios"> 使用 LF 作为分隔符(通常为 Unix/Linux 主机)</label>
+									</div>
+									<div class="input-group">
+										<input type="radio" value="option3" name="optionsRadios">使用 CR 作为分隔符(通常为 Mac 主机)</label>
+									</div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">邮件签名：</label>
+								<div class="col-sm-10">
+									<textarea cols="40" rows="8" resize="none"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">报警邮箱：</label>
+								<div class="col-sm-10">
+									<div class="row">
+										<div class="col-sm-3">
+											<textarea cols="40" rows="8" resize="none" placeholder=" ','逗号分隔"></textarea>
+										</div>
+	                                	<div class="col-sm-7">
+	                                		<input type="button" class="btn btn-success" value="测试" />
+	                                	</div>
+									</div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">报警内容：</label>
+								<div class="col-sm-10">
+                                	<textarea cols="40" rows="8" resize="none"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">报警接口：</label>
+								<div class="col-sm-10">
+                                	<input type="text" class="form-control" style="display: inline-block; width: 60px;">
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">报警手机：</label>
+								<div class="col-sm-10">
+                                	<div class="row">
+										<div class="col-sm-3">
+											<input type="text" placeholder=" ','逗号分隔" class="form-control">
+										</div>
+	                                	<div class="col-sm-7">
+	                                		<input type="button" class="btn btn-success" value="测试" />
+	                                	</div>
+									</div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">保存内容</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+	            </div>
+	            <!--ibox1 end-->
+	            
+            </div>
+		</div><!--body wrapper start-->
+	
+	</body>
+</html>

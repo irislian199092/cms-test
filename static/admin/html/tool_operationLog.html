@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置——操作日志</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    	
+	<!-- 公用CSS -->
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    	
+    <!-- 外部插件——bootstrap表格插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.css" rel="stylesheet">
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/bootstrap-editable/bootstrap-editable.css" rel="stylesheet">
+	
+	<!-- 外部插件——消息提示插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/sweet-alert/sweet-alert.css" rel="stylesheet">
+	
+	<!-- 外部插件——日期提示插件CSS -->
+	<link href="http://admin.nmop.cn/static/admin/apps/settings/css/bootstrap-datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		
+	<!-- 公用 JS -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    	
+	<!-- 外部插件——bootstrap表格插件JS-->
+	<script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap-table-editable.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/editable/bootstrap3-editable.js"></script>
+    
+    <!-- 外部插件——JQ表单验证插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+    
+    <!-- 外部插件——消息提示插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/sweet-alert/sweet-alert.js"></script>
+    
+    <!-- 外部插件——日期提示插件JS -->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/bootstrap-datepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+	    
+</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>设置</h3>
+			<ul class="breadcrumb">
+			  <li><a href="globalConfig_siteInfo.html">设置</a></li>
+			  <li class="active">操作日志</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="wrapper wrapper-content animated fadeInRight">
+	    	<div class="errorMsg"></div>
+	    	<div class="row">
+	            <div class="col-sm-12">
+	                <div class="ibox float-e-margins">
+	                    <div class="ibox-content">
+	                    	<div class="clients-list">
+	                            <ul class="nav nav-tabs">
+	                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i>全部</a></li>
+	                                <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i>今日</a></li>
+	                                <li class=""><a data-toggle="tab" href="#tab-3"><i class="fa fa-briefcase"></i>昨日</a></li>
+	                                <li class=""><a data-toggle="tab" href="#tab-4"><i class="fa fa-briefcase"></i>本周</a></li>
+	                                <li class=""><a data-toggle="tab" href="#tab-5"><i class="fa fa-briefcase"></i>本月</a></li>
+	                            </ul>
+	                       </div>
+	                        <!--tab-content start-->
+	                        <div class="tab-content">	
+                        		<!--exampleTableEventsToolbar start-->
+                            	<div class="row">
+                            		<div class="col-sm-12">
+                            			<div id="toolbar" class="form form-inline">
+                            				<div class="form-group">
+								                <label for="dtp_input1" class="col-md-3 control-label">开始</label>
+								                <div class="input-group date form_datetime col-md-9" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd- HH:ii" data-link-field="dtp_input1">
+								                    <input class="form-control" size="20" type="text" value="" readonly>
+								                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+													<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								                </div>
+								            </div>
+											<div class="form-group">
+								                <label for="dtp_input2" class="col-md-3 control-label">结束</label>
+								                <div class="input-group date form_datetime col-md-9" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd- HH:ii" data-link-field="dtp_input2">
+								                    <input class="form-control" size="20" type="text" value="" readonly>
+								                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+													<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+								                </div>
+								            </div>
+									   		<div class="btn-group">
+									   			<button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			                                            <span>动作URL</span><span class="caret" style="margin-left:15px;"></span>
+			                                    </button>
+			                                    <ul class="dropdown-menu" style="margin: 2px -60px 0;">
+												    <li><a href="#">动作URL</a></li>
+												    <li class="divider"></li>
+												    <li><a href="#" data-field="role">IP</a></li>
+												    <li><a href="#" data-field="role">用户名</a></li>
+												    <li><a href="#" data-field="role">用户ID</a></li>
+												</ul>
+									   		</div>
+									        <button id="remove" class="btn btn-danger" disabled>
+									            <i class="glyphicon glyphicon-remove"></i> 删除
+									        </button>
+									    </div>
+                            		</div>
+                            	</div>
+                        		<!--texampleTableEventsToolbar end-->
+                        		
+                        		<!--exampleTableEvents start-->
+	                            <table id="table" class="table table-hover">
+						    	</table>
+                        		<!--exampleTableEvents end-->
+	                        </div>
+	                        <!--tab-content end-->
+							
+	                    </div><!--ibox-content end-->
+	                </div><!--ibox end-->
+	            </div><!--col-sm-12 end-->
+	        </div><!--row end-->
+	    </div>
+	    <!--body wrapper end-->
+	    
+<script>
+	/*设置变量*/
+    var 	$table = $('#table'),
+        	$remove = $('#remove'),
+        	$add=$('#add'),
+        	selections = [];
+        	
+    /*初始化函数*/   	
+    function initTable() {
+        $table.bootstrapTable({
+        	height: getHeight(),
+        	url: 'tool_operationLog.json',
+		    method: 'get',
+		    toolbar: '#toolbar',
+		    pagination: true,
+		    sidePagination: "server",
+		    queryParamsType: 'page',
+		    pageNumber:1,
+		    pageSize: 10,
+		    pageList: [10, 25, 50, 100],
+		    search: true,
+		    sortable:true,
+		    idField:"logid",
+		    showColumns: true,
+		    showRefresh: true,
+		    responseHandler:responseHandler,
+            columns: [{
+		        field: 'choose',
+		        checkbox: true,
+		        align: 'center',
+		        valign: 'middle'
+		    }, 
+		    {
+		        title: 'ID',
+		        field: 'logid',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '操作人',
+		        field: 'username',
+		        align: 'center',
+		        valign: 'middle',
+		        footerFormatter: totalTextFormatter
+		    }, 
+		    {
+		        title: '链接地址',
+		        field: 'url',
+		        align: 'center',
+		        valign: 'middle',
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '操作时间',
+		        field: 'time',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		        title: '操作IP',
+		        field: 'ip',
+		        align: 'center',
+		        valign: 'middle',
+		        sortable: true,
+		        footerFormatter: totalTextFormatter
+		    },
+		    {
+		    	title: '管理操作',
+		    	field: 'operate',
+		        align: 'center',
+		        valign: 'middle',
+		        events: operateEvents,
+		        formatter: operateFormatter
+			}
+		]
+    });
+    
+     /*日期选择器*/
+  	$('.form_datetime').datetimepicker({
+	        language:'zh-CN',
+	        weekStart: 1,
+	        todayBtn:  1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			forceParse: 0,
+	        showMeridian: 1
+	});
+    
+    /*删除按钮的状态*/ 
+    $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        selections = getIdSelections();
+    });
+    
+    /*点击删除按钮*/ 
+   	$remove.click(function () {
+        var ids = getIdSelections();
+        swal({
+            title: "确认删除吗？",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "是，删除",
+            cancelButtonText: "不，取消",
+            closeOnConfirm: false,
+            closeOnCancel: true 
+    		},
+            function (isConfirm) {
+                if (isConfirm) {
+                   	swal("Deleted!", "你的记录删除成功", "success");
+                  	$table.bootstrapTable('remove', {
+		                field: 'logid',
+		                values: ids
+		            });
+		             $remove.prop('disabled', true);
+                }
+            });
+        });
+}
+    
+    /*对响应体操作*/ 
+	function responseHandler(res) {
+		return res.total?{"rows": res.data,"total": res.total}:{"rows": [],"total": 0}
+	};
+    
+    /*获取元素的userid*/
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.logid
+        });
+    }
+    
+	/*获取元素的data数据*/ 
+    function getData(){
+        return $table.bootstrapTable('getData')
+    };
+    
+     /*获取表格的高度*/ 
+    function getHeight() {
+        return $(window).height();
+    };
+    
+    /*获取全部表格个数*/
+    function totalTextFormatter(data) {
+        return 'Total';
+    };
+    
+	/*toolbar操作*/ 
+    $('#toolbar .dropdown-menu a').on('click',function(){
+    	$(this).parents('ul').children().removeClass('active');
+    	$(this).parent('li').addClass('active');
+    	var btnHtml=$(this).html()+'<span class="caret" style="margin-left:15px;"></span>';
+    	$(this).parents('ul').siblings('button').html(btnHtml);
+    	if($(this).data('field')=='department'||$(this).data('field')=='role'){
+    		var dfh=$(this).html();
+    		var gD=getData();
+    		var arr=[];
+    		$.each(gD,function(i,n){
+    			if(gD[i].department==dfh||gD[i].role==dfh){
+    				arr.push(i)
+    			}
+    		})
+    		for(var i=0;i<getData().length;i++){
+    			 $table.bootstrapTable('hideRow', {
+                	index:i
+            	});
+    		}
+    		$.each(arr,function(i,item){
+    			$table.bootstrapTable('showRow', {
+                	index:arr[i]
+           		});
+    		})
+    	}
+    	if($(this).html()=="所有部门"||$(this).html()=="所有角色"){
+    		$.each(getData(),function(i,n){
+    			$table.bootstrapTable('showRow', {
+                	index:i
+           		});
+    		})
+    	}
+    })
+	
+	/*动态添加操作栏*/
+    function operateFormatter(value, row, index) {
+        return [
+             '<a class="btn .child"  title="点击进入子集" style="border:none;background:none" href="powerSettings_admin_child.html" target="_blank">',
+            '<i class="glyphicon glyphicon-link"></i>',
+            '</a>',
+            '<button class="btn remove"  title="删除" style="border:none;background:none">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</button>'
+        ].join('');
+    };
+    
+    /*给操作栏添加点击行为*/ 
+    window.operateEvents = {
+        'click .remove': function (e, value, row, index) {
+        	swal({
+                title: "确认删除吗？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#1ab394",
+                confirmButtonText: "是，删除",
+                cancelButtonText: "不，取消",
+                closeOnConfirm: false,
+                closeOnCancel: true 
+        		},
+                function (isConfirm) {
+                    if (isConfirm) {
+                       	swal("Deleted!", "你的记录删除成功", "success");
+                      	$table.bootstrapTable('remove', {
+			                field: 'logid',
+			                values: [row.logid]
+			            });
+                    }
+                });
+        }
+    };
+   
+    /*DOM加载完成执行初始化函数*/
+    $(function(){
+    	initTable();
+    });
+    
+</script>
+		
+	</body>
+</html>
+

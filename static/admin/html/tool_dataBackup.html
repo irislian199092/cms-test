@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具——数据备份</title>
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    	
+	<!-- 公用CSS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/animate.min.css" rel="stylesheet">
+    <link href="http://admin.nmop.cn/static/admin/css/style.css" rel="stylesheet">
+    
+    <!-- 公用 JS -->
+    <script src="http://admin.nmop.cn/static/admin/jquery/jquery-1.11.3.js"></script>
+	<script src="http://admin.nmop.cn/static/admin/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- 外部插件——JQ表单验证插件JS-->
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/jquery.validate.min.js"></script>
+    <script src="http://admin.nmop.cn/static/admin/apps/settings/js/jquery.validate.js/messages_zh.min.js"></script>
+	
+	</head>
+	<body class="gray-bg">
+		<div class="page-heading" style="padding: 20px;">
+			<h3>工具</h3>
+			<ul class="breadcrumb">
+			  <li><a href="tool_dataOptimize.html">数据库</a></li>
+			  <li class="active">数据备份</li>
+			</ul>
+		</div>
+		<!--body wrapper start-->
+	    <div class="row wrapper wrapper-content animated fadeInRight">
+	    	<div class="col-sm-12">
+	    		
+	            <!--ibox1 start-->
+	            <div class="ibox float-e-margins">
+            		<div class="ibox-title">
+                        <h5>数据库备份</h5>
+                    </div>
+            		<div class="ibox-content">
+                        <form method="get" class="form-horizontal" id="dataBackupForm">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">备份方式：</label>
+								<div class="col-sm-10">
+									<label class="radio-inline" for="inlineCheckbox1">
+                                        <input type="radio" value="option1" id="inlineCheckbox1" name="optionsRadios" checked>普通分卷
+									</label>
+                                   <label class="radio-inline" for="inlineCheckbox2">
+                                        <input type="radio" value="option2" id="inlineCheckbox2" name="optionsRadios">MySQL Dump (Shell)</label>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">分卷大小：</label>
+								<div class="col-sm-10">
+									<input type="number" placeholder="4" class="form-control" style="display: inline-block; width: 80px;"max="20" min="0" name="bundling">&nbsp;M最大值为20M
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit" id="btnSubmit">开始备份</button>
+                                    <button class="btn btn-default" type="button">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+	            </div>
+	            <!--ibox1 end-->
+	            <div id="errorMsg"></div>
+            </div>
+		</div><!--body wrapper start-->
+		<script>
+			$(function(){
+				/*点击单选框切换显示隐藏状态*/ 
+				$(":radio").on('click',function(){
+					$(this).attr("checked","checked");
+					if($(":radio:checked").val()=="option2"){
+						$('.form-group:eq(1)').hide();
+					}
+					else{
+						$('.form-group:eq(1)').show();
+					}
+				})
+				
+				/*点击添加管理员验证*/ 
+				$("#dataBackupForm").validate({
+			    	rules:{
+			    		bundling:{
+			    			required:true
+			    		}
+			    	},
+			    	submitHandler:function(form) {
+						var addAdmin=$('#dataBackupForm').serialize();
+						$("#btnSubmit").bind("click", function(){
+							$.ajax({
+							type:"GET",
+			    				url:"xxx.json",
+			    				cache:false,
+			    				dataType: "json",
+			    				data:addAdmin,
+			    				success:function(msg){
+			    					alert('备份成功');
+			    				},
+			    				error:function(data, textStatus, xhr){
+			    					$('#errorMsg').html(data.status+'错误').css("color","red");
+			    					//console.log(data.status+'错误')
+			    				}
+							});
+						})
+					}
+			    });
+			})
+		</script>
+	</body>
+</html>

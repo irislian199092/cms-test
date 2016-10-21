@@ -1,0 +1,4 @@
+[24-Aug-2016 14:11:46 PRC] PHP Warning:  include(./page2.php): failed to open stream: No such file or directory in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 10
+[24-Aug-2016 14:11:46 PRC] PHP Warning:  include(): Failed opening './page2.php' for inclusion (include_path='.;/nginx/php5/PEAR') in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 10
+[24-Aug-2016 14:11:46 PRC] PHP Warning:  require(./page2.php): failed to open stream: No such file or directory in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 11
+[24-Aug-2016 14:11:46 PRC] PHP Fatal error:  require(): Failed opening required './page2.php' (include_path='.;/nginx/php5/PEAR') in E:\service\Winginx\home\nmopcn\public\static\admin\apps\pcShow\demo.php on line 11
